@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="myAppender" class="LoggerAppenderRollingFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{d.m.Y H:i:s.u} %level - %message%newline" />
+        </layout>
+        <param name="file" value="../../../../log/universedu.log" />
+        <param name="maxFileSize" value="50MB" />
+        <param name="maxBackupIndex" value="10" />
+    </appender>
+<!--    <appender name="logError" class="LoggerAppenderRollingFile" threshold="ERROR">
+    <appender name="logError" class="LoggerAppenderRollingFile" threshold="ERROR">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{d.m.Y H:i:s.u} %level - %message%newline" />
+            <param name="conversionPattern" value="%date{d.m.Y H:i:s,u}  [%level] [%logger] %file%line %message %newline" />
+        </layout>
+        <param name="file" value="../../../../log/universeduError.log" />
+        <param name="file" value="../../../../log/universeduError.log" />
+        <param name="maxFileSize" value="50MB" />
+        <param name="maxBackupIndex" value="10" />
+    </appender>-->
+    <appender name="Mail" class="LoggerAppenderMailEvent" threshold="FATAL">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{d.m.Y H:i:s.u} %level - %message%newline" />
+            <!--<param name="conversionPattern" value="%date{d.m.Y H:i:s}  [%level] [%logger] %file %line | %message " />-->
+        </layout>
+        <param name="to" value="pathe.gueye@kiwi.sn" />
+        <param name="from" value="kiwi.senegal@gmail.com" />
+        <param name="subject" value="Mail log4php" />
+        <param name="smtpHost" value="smtp.gmail.com" />
+        <param name="port" value="465" />
+    </appender>
+    <root>
+        <level value="TRACE" />
+        <appender_ref ref="myAppender" />
+        <!--<appender_ref ref="logError" />-->
+        <appender_ref ref="Mail" />
+    </root>
+    
+</configuration>

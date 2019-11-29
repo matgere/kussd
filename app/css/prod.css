@@ -1,0 +1,5 @@
+.bordure,td {
+    border: #0099CC 2px solid; /*bordure externe*/
+    border-collapse: separate;/*cellules séparées*/
+    border-spacing: 10px 5px; /*espacement horizontal : 10px et espacement vertical : 5px*/
+    }

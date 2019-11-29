@@ -1,0 +1,20 @@
+{
+	"require" : {
+		"doctrine/lib" : "*"
+	},
+	"autoload" : {
+		"classmap" : [
+			"../backend/src/be/",
+			"../backend/src/bo/",
+			"../backend/src/boGesFin/",
+			"../backend/src/boDA/",
+			"bootstrap.php",
+			"Loggers.php",
+			"../backend/src/tools/",
+			"../lib/DoctrineFunction"
+		]
+	},
+	"config" : {
+		"vendor-dir" : "../lib/doctrine/vendor"
+	}
+}
