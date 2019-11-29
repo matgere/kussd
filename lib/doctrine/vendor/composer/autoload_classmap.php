@@ -37,5 +37,8 @@ return array(
     'UVd\\DoctrineFunction\\UnixTimestamp' => $baseDir . '/../lib/DoctrineFunction/UnixTimestamp.php',
     'User\\Profil' => $baseDir . '/../backend/src/be/Profil.php',
     'User\\User' => $baseDir . '/../backend/src/be/User.php',
+    'User\\UserController' => $baseDir . '/../backend/src/bo/user/UserController.php',
+    'User\\UserManager' => $baseDir . '/../backend/src/bo/user/UserManager.php',
+    'User\\UserQueries' => $baseDir . '/../backend/src/bo/user/UserQueries.php',
     'tools\\Tool' => $baseDir . '/../backend/src/tools/Tool.php',
 );

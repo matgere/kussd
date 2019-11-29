@@ -4,7 +4,7 @@
         <layout class="LoggerLayoutPattern">
             <param name="conversionPattern" value="%date{d.m.Y H:i:s.u} %level - %message%newline" />
         </layout>
-        <param name="file" value="../../../../log/universedu.log" />
+        <param name="file" value="../../../../log/kussd.log" />
         <param name="maxFileSize" value="50MB" />
         <param name="maxBackupIndex" value="10" />
     </appender>

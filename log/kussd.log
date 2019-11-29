@@ -1,0 +1,57 @@
+29.11.2019 21:49:29.252 INFO -  - SELECT * FROM  user u WHERE  u.login='fdkfjdk' and u.password='5ca6456ce10e445285b0d74dc763e7fd' and u.status=1
+29.11.2019 21:49:29.256 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='fdkfjdk' and u.password='5ca6456ce10e445285b0d74dc763e7fd' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:49:45.219 INFO -  - SELECT * FROM  user u WHERE  u.login='fdkfjdk' and u.password='5ca6456ce10e445285b0d74dc763e7fd' and u.status=1
+29.11.2019 21:49:45.220 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='fdkfjdk' and u.password='5ca6456ce10e445285b0d74dc763e7fd' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:50:14.552 INFO -  - SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1
+29.11.2019 21:50:14.552 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:53:12.252 INFO -  - SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1
+29.11.2019 21:53:12.253 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:53:20.920 INFO -  - SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1
+29.11.2019 21:53:20.921 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:56:03.583 INFO -  - SELECT * FROM  user u WHERE  u.login='sds' and u.password='1ea5d22fb66059c87c62ee7eed518d72' and u.status=1
+29.11.2019 21:56:03.584 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='sds' and u.password='1ea5d22fb66059c87c62ee7eed518d72' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:56:12.139 INFO -  - SELECT * FROM  user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1
+29.11.2019 21:56:12.140 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:57:07.107 INFO -  - SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1
+29.11.2019 21:57:07.108 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:57:08.271 INFO -  - SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1
+29.11.2019 21:57:08.273 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:57:08.690 INFO -  - SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1
+29.11.2019 21:57:08.691 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:57:17.670 INFO -  - SELECT * FROM  user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1
+29.11.2019 21:57:17.672 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1':
+
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+29.11.2019 21:58:16.389 INFO -  - SELECT * FROM  ud_user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1
+29.11.2019 22:04:44.614 INFO -  - SELECT * FROM  ud_user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1
+29.11.2019 22:32:12.201 INFO - [userId-1] - Debut doGetAllMenuByUser
+29.11.2019 22:32:12.202 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+29.11.2019 22:32:12.203 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+29.11.2019 22:32:12.310 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+29.11.2019 22:32:12.320 INFO - [userId-1] - userId=1
+29.11.2019 22:32:12.323 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+29.11.2019 22:32:12.328 INFO - [userId-1] - no
+29.11.2019 22:32:12.329 ERROR - [userId-1] - Code 110, Cette liste est vide
+29.11.2019 22:32:12.330 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+29.11.2019 22:32:12.331 ERROR - [userId-1] - Fin doGetAllMenuByUser

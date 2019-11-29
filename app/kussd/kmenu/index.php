@@ -38,23 +38,28 @@ padding: 8px !important;
   </head>
  <body>
 <!--  	<div class="be-top-header"> -->
-        <div class="be-wrapper be-fixed-sidebar">
-            <nav class="navbar navbar-expand fixed-top be-top-header">
-                <div class="container-fluid">
-                <div class="be-navbar-header"><a class="navbar-brand" href="#" style="background-image:none;">USSD Dynamic</a>
-                    </div>
-                </div>
-            </nav>
-              <div class="btn-toolbar float-right">
+ <div class="be-wrapper">
+    <nav class="navbar navbar-expand fixed-top be-top-header">
+        <div class="container-fluid">
+        <div class="be-navbar-header"><a class="navbar-brand" href="#" style="background-image:none;">USSD Dynamic</a>
+            </div>
+        </div>
+    </nav>
+      <div class="">
+          <div class="page-head">
+         <div class="btn-toolbar float-right margin-bottom">
                                 <div class="btn-group btn-space mr-2">
                                     <button id="btn_newMenu" class="btn btn-secondary" type="button" title="Ajouter un nouveau menu" data-toggle="tooltip" data-placement="bottom"><i class="icon mdi mdi-plus"></i></button>
-         						</div>
+                    </div>
                                 <div class="btn-group btn-space mr-2">
                                     <button id="btn_generateMenu" class="btn btn-secondary" type="button" title="generer menu(s)" data-toggle="tooltip" data-placement="bottom"><i class="icon mdi mdi-play"></i></button>
-         						</div>
+                    </div>
          
-       		 </div>
-      <table class="table" id="tree" >
+           </div>
+        </div>
+        <div class="main-content container-fluid">
+                <div class="card card-table">
+                   <table class="table" id="tree" >
       <thead>
                         <tr>
                             <th>Titre(title)</th>
@@ -162,9 +167,10 @@ padding: 8px !important;
            </tbody>
              
 </table>
-      
-  </div>
-        
+            </div>
+      </div>
+ </div>   
+ </div>
 <!--      </div> -->
      
         <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>

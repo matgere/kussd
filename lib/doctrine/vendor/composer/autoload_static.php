@@ -83,6 +83,9 @@ class ComposerStaticInitd84324078eac9e0f5cbb7e606278da29
         'UVd\\DoctrineFunction\\UnixTimestamp' => __DIR__ . '/../../../..'.'/config' . '/../lib/DoctrineFunction/UnixTimestamp.php',
         'User\\Profil' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/be/Profil.php',
         'User\\User' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/be/User.php',
+        'User\\UserController' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/user/UserController.php',
+        'User\\UserManager' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/user/UserManager.php',
+        'User\\UserQueries' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/user/UserQueries.php',
         'tools\\Tool' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/tools/Tool.php',
     );
 
