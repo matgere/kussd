@@ -1,57 +1,1052 @@
-29.11.2019 21:49:29.252 INFO -  - SELECT * FROM  user u WHERE  u.login='fdkfjdk' and u.password='5ca6456ce10e445285b0d74dc763e7fd' and u.status=1
-29.11.2019 21:49:29.256 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='fdkfjdk' and u.password='5ca6456ce10e445285b0d74dc763e7fd' and u.status=1':
+30.11.2019 01:25:09.949 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:25:09.950 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:25:09.951 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:25:10.026 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:25:10.034 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:25:10.036 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:25:10.037 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:25:52.259 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:25:52.260 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:25:52.261 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:25:52.336 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:25:52.343 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1 and parent_id = 
+30.11.2019 01:25:52.345 ERROR - [userId-1] - An exception occurred while executing 'SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1 and parent_id = ':
 
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:49:45.219 INFO -  - SELECT * FROM  user u WHERE  u.login='fdkfjdk' and u.password='5ca6456ce10e445285b0d74dc763e7fd' and u.status=1
-29.11.2019 21:49:45.220 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='fdkfjdk' and u.password='5ca6456ce10e445285b0d74dc763e7fd' and u.status=1':
-
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:50:14.552 INFO -  - SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1
-29.11.2019 21:50:14.552 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1':
-
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:53:12.252 INFO -  - SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1
-29.11.2019 21:53:12.253 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1':
-
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:53:20.920 INFO -  - SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1
-29.11.2019 21:53:20.921 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='dksdsk' and u.password='785796828bfb4a3fca03d01012f86412' and u.status=1':
-
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:56:03.583 INFO -  - SELECT * FROM  user u WHERE  u.login='sds' and u.password='1ea5d22fb66059c87c62ee7eed518d72' and u.status=1
-29.11.2019 21:56:03.584 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='sds' and u.password='1ea5d22fb66059c87c62ee7eed518d72' and u.status=1':
-
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:56:12.139 INFO -  - SELECT * FROM  user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1
-29.11.2019 21:56:12.140 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1':
-
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:57:07.107 INFO -  - SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1
-29.11.2019 21:57:07.108 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1':
-
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:57:08.271 INFO -  - SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1
-29.11.2019 21:57:08.273 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1':
-
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:57:08.690 INFO -  - SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1
-29.11.2019 21:57:08.691 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='admin' and u.password='b89f7a5ff3e3a225d572dac38b2a67f7' and u.status=1':
-
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:57:17.670 INFO -  - SELECT * FROM  user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1
-29.11.2019 21:57:17.672 TRACE - An exception occurred while executing 'SELECT * FROM  user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1':
-
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ussd_dynamic.user' doesn't exist /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
-29.11.2019 21:58:16.389 INFO -  - SELECT * FROM  ud_user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1
-29.11.2019 22:04:44.614 INFO -  - SELECT * FROM  ud_user u WHERE  u.login='admin' and u.password='e7247759c1633c0f9f1485f3690294a9' and u.status=1
-29.11.2019 22:32:12.201 INFO - [userId-1] - Debut doGetAllMenuByUser
-29.11.2019 22:32:12.202 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
-29.11.2019 22:32:12.203 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
-29.11.2019 22:32:12.310 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
-29.11.2019 22:32:12.320 INFO - [userId-1] - userId=1
-29.11.2019 22:32:12.323 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2 /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+30.11.2019 01:25:52.346 ERROR - [userId-1] - Fin doGetAllMenuByUser 
+30.11.2019 01:26:37.905 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:26:37.906 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:26:37.907 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:26:37.972 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:26:37.978 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
                                 AND m.status=1 AND m.generate=1
-29.11.2019 22:32:12.328 INFO - [userId-1] - no
-29.11.2019 22:32:12.329 ERROR - [userId-1] - Code 110, Cette liste est vide
-29.11.2019 22:32:12.330 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
-29.11.2019 22:32:12.331 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:26:37.979 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:26:37.981 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:26:37.982 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:27:23.103 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:27:23.105 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:27:23.106 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:27:23.184 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:27:23.191 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:27:23.192 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:27:23.193 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:27:23.194 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:28:05.278 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:28:05.279 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:28:05.280 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:28:05.354 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:28:05.363 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:28:05.365 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:28:05.366 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:28:05.368 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:28:47.179 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:28:47.181 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:28:47.182 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:28:47.262 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:28:47.270 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:28:47.273 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:28:47.274 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:28:47.277 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:29:15.195 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:29:15.196 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:29:15.197 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:29:15.268 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:29:15.275 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:29:15.276 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:29:15.277 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:29:15.278 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:32:16.698 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:32:16.699 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:32:16.699 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:32:16.768 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:32:16.774 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:32:16.776 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 01:32:16.778 ERROR - [userId-1] - An exception occurred while executing 'SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1 and parent_id = 2':
+
+SQLSTATE[HY093]: Invalid parameter number: no parameters were bound /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+30.11.2019 01:32:16.778 ERROR - [userId-1] - Fin doGetAllMenuByUser 
+30.11.2019 01:32:17.036 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:32:17.037 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:32:17.038 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:32:17.109 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:32:17.115 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:32:17.116 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 01:32:17.117 ERROR - [userId-1] - An exception occurred while executing 'SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1 and parent_id = 2':
+
+SQLSTATE[HY093]: Invalid parameter number: no parameters were bound /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+30.11.2019 01:32:17.118 ERROR - [userId-1] - Fin doGetAllMenuByUser 
+30.11.2019 01:32:17.458 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:32:17.459 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:32:17.460 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:32:17.535 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:32:17.543 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:32:17.544 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 01:32:17.546 ERROR - [userId-1] - An exception occurred while executing 'SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1 and parent_id = 2':
+
+SQLSTATE[HY093]: Invalid parameter number: no parameters were bound /Applications/MAMP/htdocs/ussddynamic/lib/doctrine/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php 91
+30.11.2019 01:32:17.546 ERROR - [userId-1] - Fin doGetAllMenuByUser 
+30.11.2019 01:33:55.759 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:33:55.760 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:33:55.761 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:33:55.832 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:33:55.838 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:33:55.839 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 01:33:55.841 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 01:33:55.842 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 01:33:55.844 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 01:33:55.845 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:33:55.847 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:33:55.848 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:44:12.910 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:44:12.911 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:44:12.912 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:44:13.015 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:44:13.023 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:44:13.024 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 01:44:13.025 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 01:44:13.026 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 01:44:13.027 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 01:44:13.028 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:44:13.029 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:44:13.030 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:44:29.042 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:44:29.043 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:44:29.043 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:44:29.116 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:44:29.122 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:44:29.124 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 01:44:29.125 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 01:44:29.126 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 01:44:29.127 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 01:44:29.128 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:44:29.129 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:44:29.130 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:47:02.698 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:47:02.699 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:47:02.699 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:47:02.763 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:47:02.770 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:47:02.771 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 01:47:02.773 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 01:47:02.774 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 01:47:02.775 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 01:47:02.776 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:47:02.777 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:47:02.778 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 01:48:20.275 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 01:48:20.276 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:48:20.277 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 01:48:20.380 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 01:48:20.388 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 01:48:20.389 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 01:48:20.390 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 01:48:20.392 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 01:48:20.393 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 01:48:20.394 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 01:48:20.395 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 01:48:20.396 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 02:25:39.852 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 02:25:39.853 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 02:25:39.853 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 02:25:39.963 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 02:25:39.970 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 02:25:39.971 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 02:25:39.973 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 02:25:39.974 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 02:25:39.975 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 02:25:39.976 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 02:25:39.977 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 02:25:39.978 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 02:45:21.092 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 02:45:21.093 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 02:45:21.094 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 02:45:21.197 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 02:45:21.205 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 02:45:21.207 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 02:45:21.208 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 02:45:21.209 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 02:45:21.210 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 02:45:21.211 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 02:45:21.213 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 02:45:21.214 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 02:49:49.775 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 02:49:49.776 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 02:49:49.777 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 02:49:49.874 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 02:49:49.884 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 02:49:49.886 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 02:49:49.887 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 02:49:49.889 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 02:49:49.890 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 02:49:49.891 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 02:49:49.892 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 02:49:49.893 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:27:50.897 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:27:50.898 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:27:50.899 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:27:51.003 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:27:51.011 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:27:51.012 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 11:27:51.014 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 11:27:51.015 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 11:27:51.016 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 11:27:51.017 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 11:27:51.018 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 11:27:51.019 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:28:56.908 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:28:56.910 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:28:56.911 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:28:56.983 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:28:56.990 INFO - [userId-1] - userId=1
+30.11.2019 11:28:56.992 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:28:56.994 INFO - [userId-1] - ok
+30.11.2019 11:28:56.995 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:34:00.034 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:34:00.035 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:34:00.036 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:34:00.104 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:34:00.110 INFO - [userId-1] - userId=1
+30.11.2019 11:34:00.111 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:34:00.112 INFO - [userId-1] - ok
+30.11.2019 11:34:00.113 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:39.993 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:39.994 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:39.995 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:40.062 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:40.067 INFO - [userId-1] - userId=1
+30.11.2019 11:49:40.068 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:40.070 INFO - [userId-1] - ok
+30.11.2019 11:49:40.071 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:40.991 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:40.991 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:40.992 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:41.053 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:41.059 INFO - [userId-1] - userId=1
+30.11.2019 11:49:41.060 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:41.061 INFO - [userId-1] - ok
+30.11.2019 11:49:41.062 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:41.300 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:41.301 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:41.302 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:41.379 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:41.385 INFO - [userId-1] - userId=1
+30.11.2019 11:49:41.386 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:41.388 INFO - [userId-1] - ok
+30.11.2019 11:49:41.389 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:41.659 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:41.660 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:41.661 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:41.720 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:41.725 INFO - [userId-1] - userId=1
+30.11.2019 11:49:41.726 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:41.727 INFO - [userId-1] - ok
+30.11.2019 11:49:41.728 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:46.081 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:46.082 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:46.083 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:46.148 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:46.153 INFO - [userId-1] - userId=1
+30.11.2019 11:49:46.155 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:46.156 INFO - [userId-1] - ok
+30.11.2019 11:49:46.157 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:46.382 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:46.383 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:46.384 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:46.450 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:46.455 INFO - [userId-1] - userId=1
+30.11.2019 11:49:46.456 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:46.458 INFO - [userId-1] - ok
+30.11.2019 11:49:46.459 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:46.688 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:46.689 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:46.690 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:46.751 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:46.756 INFO - [userId-1] - userId=1
+30.11.2019 11:49:46.758 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:46.759 INFO - [userId-1] - ok
+30.11.2019 11:49:46.760 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:47.069 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:47.071 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:47.073 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:47.137 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:47.143 INFO - [userId-1] - userId=1
+30.11.2019 11:49:47.144 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:47.145 INFO - [userId-1] - ok
+30.11.2019 11:49:47.146 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:47.575 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:47.576 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:47.577 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:47.652 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:47.658 INFO - [userId-1] - userId=1
+30.11.2019 11:49:47.660 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:47.661 INFO - [userId-1] - ok
+30.11.2019 11:49:47.662 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:47.897 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:47.898 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:47.899 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:47.963 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:47.968 INFO - [userId-1] - userId=1
+30.11.2019 11:49:47.970 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:47.971 INFO - [userId-1] - ok
+30.11.2019 11:49:47.972 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:49:49.385 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:49:49.386 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:49.386 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:49:49.448 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:49:49.452 INFO - [userId-1] - userId=1
+30.11.2019 11:49:49.453 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:49:49.455 INFO - [userId-1] - ok
+30.11.2019 11:49:49.456 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:50:19.715 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:50:19.716 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:50:19.717 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:50:19.785 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:50:19.790 INFO - [userId-1] - userId=1
+30.11.2019 11:50:19.791 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:50:19.792 INFO - [userId-1] - ok
+30.11.2019 11:50:19.793 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:50:20.490 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:50:20.491 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:50:20.492 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:50:20.554 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:50:20.559 INFO - [userId-1] - userId=1
+30.11.2019 11:50:20.560 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:50:20.562 INFO - [userId-1] - ok
+30.11.2019 11:50:20.563 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:50:21.250 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:50:21.251 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:50:21.252 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:50:21.319 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:50:21.324 INFO - [userId-1] - userId=1
+30.11.2019 11:50:21.325 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:50:21.326 INFO - [userId-1] - ok
+30.11.2019 11:50:21.327 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:50:59.239 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:50:59.240 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:50:59.241 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:50:59.302 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:50:59.307 INFO - [userId-1] - userId=1
+30.11.2019 11:50:59.309 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:50:59.310 INFO - [userId-1] - ok
+30.11.2019 11:50:59.311 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:50:59.969 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:50:59.970 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:50:59.970 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:51:00.039 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:51:00.043 INFO - [userId-1] - userId=1
+30.11.2019 11:51:00.044 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:51:00.046 INFO - [userId-1] - ok
+30.11.2019 11:51:00.047 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:51:00.293 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:51:00.294 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:51:00.294 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:51:00.354 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:51:00.359 INFO - [userId-1] - userId=1
+30.11.2019 11:51:00.360 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:51:00.362 INFO - [userId-1] - ok
+30.11.2019 11:51:00.362 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:52:08.612 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:52:08.613 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:52:08.614 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:52:08.677 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:52:08.682 INFO - [userId-1] - userId=1
+30.11.2019 11:52:08.684 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:52:08.685 INFO - [userId-1] - ok
+30.11.2019 11:52:08.686 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:54:18.612 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:54:18.613 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:18.613 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:18.674 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:54:18.679 INFO - [userId-1] - userId=1
+30.11.2019 11:54:18.680 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:54:18.681 INFO - [userId-1] - ok
+30.11.2019 11:54:18.682 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:54:19.373 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:54:19.375 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:19.375 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:19.432 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:54:19.437 INFO - [userId-1] - userId=1
+30.11.2019 11:54:19.439 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:54:19.440 INFO - [userId-1] - ok
+30.11.2019 11:54:19.441 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:54:20.013 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:54:20.014 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:20.015 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:20.072 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:54:20.076 INFO - [userId-1] - userId=1
+30.11.2019 11:54:20.078 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:54:20.079 INFO - [userId-1] - ok
+30.11.2019 11:54:20.079 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:54:20.375 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:54:20.376 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:20.376 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:20.432 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:54:20.438 INFO - [userId-1] - userId=1
+30.11.2019 11:54:20.439 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:54:20.440 INFO - [userId-1] - ok
+30.11.2019 11:54:20.441 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:54:20.667 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:54:20.668 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:20.669 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:20.730 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:54:20.735 INFO - [userId-1] - userId=1
+30.11.2019 11:54:20.737 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:54:20.738 INFO - [userId-1] - ok
+30.11.2019 11:54:20.739 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:54:20.868 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:54:20.870 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:20.871 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:20.929 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:54:20.934 INFO - [userId-1] - userId=1
+30.11.2019 11:54:20.936 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:54:20.937 INFO - [userId-1] - ok
+30.11.2019 11:54:20.938 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:54:21.042 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:54:21.043 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:21.044 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:21.101 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:54:21.107 INFO - [userId-1] - userId=1
+30.11.2019 11:54:21.108 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:54:21.109 INFO - [userId-1] - ok
+30.11.2019 11:54:21.110 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:54:39.550 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:54:39.552 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:39.552 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:39.614 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:54:39.619 INFO - [userId-1] - userId=1
+30.11.2019 11:54:39.620 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:54:39.621 INFO - [userId-1] - ok
+30.11.2019 11:54:39.622 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:54:40.288 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:54:40.289 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:40.290 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:54:40.350 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:54:40.354 INFO - [userId-1] - userId=1
+30.11.2019 11:54:40.356 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:54:40.357 INFO - [userId-1] - ok
+30.11.2019 11:54:40.358 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:56:34.684 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:56:34.685 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:56:34.686 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:56:34.748 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:56:34.753 INFO - [userId-1] - userId=1
+30.11.2019 11:56:34.754 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:56:34.755 INFO - [userId-1] - ok
+30.11.2019 11:56:34.757 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:56:35.271 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:56:35.272 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:56:35.272 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:56:35.334 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:56:35.339 INFO - [userId-1] - userId=1
+30.11.2019 11:56:35.341 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:56:35.342 INFO - [userId-1] - ok
+30.11.2019 11:56:35.343 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:56:35.471 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:56:35.472 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:56:35.474 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:56:35.531 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:56:35.536 INFO - [userId-1] - userId=1
+30.11.2019 11:56:35.537 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:56:35.538 INFO - [userId-1] - ok
+30.11.2019 11:56:35.539 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:56:35.641 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:56:35.642 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:56:35.643 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:56:35.699 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:56:35.704 INFO - [userId-1] - userId=1
+30.11.2019 11:56:35.705 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:56:35.706 INFO - [userId-1] - ok
+30.11.2019 11:56:35.707 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:59:00.678 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:59:00.678 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:59:00.679 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:59:00.741 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:59:00.747 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:59:00.748 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 11:59:00.749 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 11:59:00.750 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 11:59:00.751 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 11:59:00.752 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 11:59:00.753 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 11:59:00.754 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 11:59:00.755 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 11:59:37.568 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 11:59:37.570 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:59:37.571 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 11:59:37.640 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 11:59:37.646 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 11:59:37.647 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 11:59:37.648 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 11:59:37.649 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 11:59:37.650 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 11:59:37.652 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 11:59:37.654 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 11:59:37.655 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 11:59:37.657 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:00:24.103 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:00:24.104 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:00:24.105 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:00:24.181 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:00:24.187 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:00:24.189 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:00:24.190 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:00:24.191 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:00:24.193 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:00:24.195 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:00:24.196 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:00:24.197 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:00:24.198 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:00:27.062 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:00:27.063 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:00:27.064 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:00:27.156 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:00:27.164 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:00:27.165 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:00:27.166 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:00:27.168 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:00:27.169 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:00:27.171 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:00:27.172 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:00:27.173 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:00:27.174 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:01:16.044 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:01:16.045 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:01:16.046 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:01:16.109 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:01:16.114 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:01:16.115 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:01:16.116 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:01:16.117 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:01:16.118 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:01:16.119 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:01:16.121 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:01:16.122 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:01:16.123 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:01:23.005 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:01:23.007 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:01:23.008 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:01:23.080 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:01:23.085 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:01:23.087 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:01:23.088 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:01:23.089 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:01:23.090 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:01:23.092 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:01:23.093 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:01:23.094 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:01:23.095 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:09:39.771 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:09:39.772 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:09:39.773 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:09:39.842 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:09:39.849 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:09:39.850 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:09:39.851 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:09:39.852 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:09:39.854 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:09:39.855 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:09:39.856 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:09:39.858 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:09:39.859 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:09:59.624 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:09:59.625 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:09:59.626 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:09:59.700 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:09:59.705 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:09:59.706 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:09:59.707 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:09:59.709 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:09:59.711 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:09:59.713 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:09:59.715 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:09:59.716 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:09:59.716 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:10:22.756 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:10:22.757 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:10:22.758 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:10:22.828 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:10:22.835 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:10:22.836 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:10:22.838 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:10:22.839 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:10:22.841 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:10:22.842 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:10:22.843 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:10:22.844 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:10:22.844 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:10:33.024 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:10:33.025 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:10:33.026 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:10:33.095 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:10:33.102 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:10:33.104 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:10:33.105 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:10:33.106 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:10:33.107 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:10:33.108 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:10:33.110 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:10:33.111 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:10:33.111 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:11:19.855 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:11:19.856 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:11:19.857 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:11:19.923 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:11:19.930 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:11:19.931 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:11:19.933 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:11:19.934 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:11:19.935 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:11:19.936 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:11:19.937 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:11:19.937 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:11:19.938 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:11:37.753 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:11:37.754 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:11:37.755 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:11:37.823 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:11:37.828 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:11:37.829 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:11:37.831 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:11:37.832 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:11:37.834 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:11:37.835 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:11:37.837 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:11:37.837 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:11:37.838 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:22:26.151 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:22:26.151 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:22:26.152 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:22:26.253 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:22:26.260 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:22:26.261 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:22:26.262 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:22:26.264 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:22:26.265 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:22:26.266 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:22:26.267 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:22:26.268 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:22:26.269 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:22:37.637 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:22:37.639 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:22:37.640 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:22:37.719 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:22:37.724 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:22:37.726 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:22:37.727 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:22:37.729 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:22:37.730 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:22:37.732 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:22:37.733 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:22:37.734 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:22:37.735 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:25:34.748 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:25:34.749 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:34.749 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:34.805 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:25:34.810 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:25:34.811 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:25:34.812 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:25:34.813 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:25:34.814 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:25:34.815 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:25:34.816 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:25:34.817 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:25:34.819 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:25:35.386 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:25:35.387 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:35.388 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:35.441 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:25:35.446 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:25:35.447 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:25:35.448 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:25:35.449 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:25:35.450 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:25:35.452 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:25:35.453 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:25:35.454 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:25:35.455 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:25:35.560 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:25:35.561 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:35.561 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:35.614 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:25:35.620 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:25:35.621 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:25:35.622 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:25:35.623 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:25:35.624 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:25:35.626 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:25:35.627 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:25:35.628 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:25:35.628 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:25:35.683 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:25:35.683 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:35.684 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:35.737 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:25:35.742 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:25:35.744 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:25:35.745 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:25:35.746 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:25:35.747 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:25:35.748 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:25:35.749 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:25:35.750 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:25:35.750 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:25:35.946 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:25:35.947 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:35.948 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:36.000 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:25:36.006 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:25:36.007 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:25:36.009 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:25:36.010 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:25:36.011 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:25:36.012 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:25:36.013 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:25:36.014 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:25:36.014 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:25:36.106 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:25:36.107 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:36.107 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:36.160 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:25:36.165 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:25:36.166 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:25:36.167 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:25:36.169 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:25:36.170 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:25:36.171 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:25:36.172 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:25:36.173 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:25:36.174 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:25:36.230 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:25:36.230 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:36.231 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:36.283 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:25:36.288 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:25:36.290 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:25:36.291 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:25:36.292 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:25:36.293 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:25:36.294 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:25:36.295 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:25:36.296 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:25:36.296 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:25:36.770 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:25:36.771 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:36.772 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:36.824 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:25:36.829 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:25:36.830 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:25:36.831 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:25:36.832 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:25:36.833 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:25:36.834 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:25:36.836 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:25:36.837 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:25:36.838 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:25:36.934 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:25:36.935 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:36.935 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:25:36.989 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:25:36.994 INFO - [userId-1] - SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=1
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:25:36.995 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 2
+30.11.2019 12:25:36.996 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 3
+30.11.2019 12:25:36.997 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 4
+30.11.2019 12:25:36.998 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 7
+30.11.2019 12:25:36.999 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = 8
+30.11.2019 12:25:37.000 ERROR - [userId-1] - Code 110, Cette liste est vide
+30.11.2019 12:25:37.001 ERROR - [userId-1] - Erreur 110, veuillez saisir votre administrateur SVP! /Applications/MAMP/htdocs/ussddynamic/backend/src/bo/menu/MenuController.php 272
+30.11.2019 12:25:37.002 ERROR - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:31:46.951 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:31:46.952 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:46.953 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:47.025 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:31:47.031 INFO - [userId-1] - userId=1
+30.11.2019 12:31:47.032 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:31:47.033 INFO - [userId-1] - ok
+30.11.2019 12:31:47.034 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:31:47.385 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:31:47.386 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:47.387 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:47.452 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:31:47.457 INFO - [userId-1] - userId=1
+30.11.2019 12:31:47.458 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:31:47.459 INFO - [userId-1] - ok
+30.11.2019 12:31:47.460 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:31:47.707 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:31:47.708 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:47.708 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:47.776 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:31:47.781 INFO - [userId-1] - userId=1
+30.11.2019 12:31:47.783 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:31:47.785 INFO - [userId-1] - ok
+30.11.2019 12:31:47.787 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:31:48.084 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:31:48.085 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:48.086 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:48.153 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:31:48.159 INFO - [userId-1] - userId=1
+30.11.2019 12:31:48.160 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:31:48.161 INFO - [userId-1] - ok
+30.11.2019 12:31:48.162 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:31:48.400 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:31:48.401 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:48.401 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:48.467 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:31:48.474 INFO - [userId-1] - userId=1
+30.11.2019 12:31:48.476 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:31:48.478 INFO - [userId-1] - ok
+30.11.2019 12:31:48.479 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:31:48.732 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:31:48.733 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:48.735 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:48.798 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:31:48.806 INFO - [userId-1] - userId=1
+30.11.2019 12:31:48.807 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:31:48.808 INFO - [userId-1] - ok
+30.11.2019 12:31:48.809 INFO - [userId-1] - Fin doGetAllMenuByUser
+30.11.2019 12:31:58.553 INFO - [userId-1] - Debut doGetAllMenuByUser
+30.11.2019 12:31:58.554 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:58.555 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+30.11.2019 12:31:58.623 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.activateUser AS activateUser11, t0.status AS status12, t0.activate AS activate13, t0.archive AS archive14, t0.createdDate AS createdDate15, t0.updatedDate AS updatedDate16, t0.deletedDate AS deletedDate17, t0.activatedDate AS activatedDate18, t0.deactivatedDate AS deactivatedDate19, t0.archivedDate AS archivedDate20, t0.restoredDate AS restoredDate21, t0.removedDate AS removedDate22, t0.undoArhivedDate AS undoArhivedDate23, t0.createdBy AS createdBy24, t0.updatedBy AS updatedBy25, t0.removedBy AS removedBy26, t0.deletedBy AS deletedBy27, t0.restoredBy AS restoredBy28, t0.activatedBy AS activatedBy29, t0.deactivatedBy AS deactivatedBy30, t0.archivedBy AS archivedBy31, t0.undoarchivedBy AS undoarchivedBy32 FROM ud_user t0 WHERE t0.id = ?
+30.11.2019 12:31:58.628 INFO - [userId-1] - userId=1
+30.11.2019 12:31:58.629 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1
+30.11.2019 12:31:58.630 INFO - [userId-1] - ok
+30.11.2019 12:31:58.631 INFO - [userId-1] - Fin doGetAllMenuByUser

@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="app/assets/img/logo-fav.png">
-    <title>Beagle</title>
+    <title>KUSSD</title>
     <link rel="stylesheet" type="text/css" href="app/assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/>
     <link rel="stylesheet" href="app/assets/css/app.css" type="text/css"/>
     <link rel="stylesheet" href="app/plugins/pnotify/pnotify.custom.min.css" type="text/css" />
