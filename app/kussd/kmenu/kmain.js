@@ -33,9 +33,10 @@
                                     node_id = "node-" + value.id
                                     if(value.parent_id != null){
                                         node_class="child-of-node-" + value.parent_id;
+                                       
                                     }
-                                        
-                                    html += '<tr id="'+node_id+'" class="'+node_class+'">'
+                                       //class="'+node_class+'" 
+                                    html += '<tr id="'+node_id+'" class="'+node_class+'" >'
                                            + '<td>'+value.title+'</td>'
                                            +'<td>'+value.text+'</td>'
                                            + '<td>'+value.type+'</td>'
@@ -47,7 +48,6 @@
                               });
                                console.log(html);
                               $('.tree-tbody').append(html);
-                              
                         }
                         
                         function onError() {
