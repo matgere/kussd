@@ -63,11 +63,53 @@ Class User extends BaseEntite {
      * @Column(type="smallint",length=1, nullable=true)
      * */
     private $validate;
+    
+    /**
+     * @Column(type="string", length=200, nullable=true)
+     * */
+    private $repName;
+    
+    /**
+     * @Column(type="string", length=200, nullable=true)
+     * */
+    private $numTel;
 
     /**
      * @Column(type="string", length=200, nullable=true)
      * */
     private $activateUser;
+    /**
+     * @return mixed
+     */
+    public function getRepName()
+    {
+        return $this->repName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNumTel()
+    {
+        return $this->numTel;
+    }
+
+    /**
+     * @param mixed $repName
+     */
+    public function setRepName($repName)
+    {
+        $this->repName = $repName;
+    }
+
+    /**
+     * @param mixed $numTel
+     */
+    public function setNumTel($numTel)
+    {
+        $this->numTel = $numTel;
+    }
+
     /**
      * @return mixed
      */

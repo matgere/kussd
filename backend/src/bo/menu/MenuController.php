@@ -148,21 +148,30 @@ class MenuController extends BaseAction implements BaseController {
     //  && $request['note'] != '' && $request['commentaire'] != ''&& $request['userId'] != ''
     public function doGenerateMenu($request){
         try {
+            //rep
             $chemin='C:/xampp/htdocs/';
             $repUser='ussdgenerate/';
-            $numTel="221776470760";
             $hrefFils="";
             $this->doLogInfo("Debut du doGenerateMenu");
             $this->doLogInfo('List des parametres:' . $this->doGetListParam());
             if (isset($request['ACTION']) && isset($request['userId']) ){
+                
                 $user = $this->menuManager->findById("User\User", $request['userId']);
-                $listMenu=$this->menuManager->getAllMenuByUser($user);
-//                 var_dump($listMenu);
+                if($user!=null){
+                    if($user->getRepName()!=null)
+                        $repUser=$user->getRepName().'/';
+                    else 
+                        $repUser=$repUser.$user->getId().'/';
+                        $dest=$chemin.$repUser;
+                        if (!file_exists($dest))
+                            mkdir($dest, 0777, true);
+                    $listMenu=$this->menuManager->getAllMenuByUser($user);
+                
+//                 var_dump($user);
 //                 $listMenuJ=json_encode($listMenu);
 //                 $this->doLogInfo('List des menus:' . $listMenuJ);
                 if ($listMenu != null) {
                     foreach ($listMenu as $unMenu) {
-//                         var_dump($unMenu["menuId"]);
                         $menuG=$this->commonManager->findById("Menu\Menu", $unMenu["id"]);
                         $this->doLogInfo('menuId:' . $menuG->getId());
                         if($menuG->getParent()==null){
@@ -173,6 +182,7 @@ class MenuController extends BaseAction implements BaseController {
                                 $titleFils=$newMenu["title"];
                                 $nameFils=$newMenu["name"];
                                 $textFils=$newMenu["text"];
+                                $typeFils=$newMenu["type"];
                                 
                                 $file = $chemin.$repUser.$nameFils.'.php';
                                 // Open the file to get existing content
@@ -189,8 +199,11 @@ class MenuController extends BaseAction implements BaseController {
                                  ";
                             // Write the contents back to the file
                             file_put_contents($file, $current);
-                            
-                                $hrefFils.='<a href="'.$nameFils.'.php?response="'.$numTel.'|'.$titleFils.'" >'.$titleFils.'</a><br/>';
+                            if($typeFils=="accesskey")
+                                $hrefFils.='<a href="'.$nameFils.'.php?response="'.$titleFils.'" >'.$titleFils.'</a><br/>';
+                           else
+                               $hrefFils='<form action="langue.php"><input type="text" name="response"/></form>';
+                           
                             }
                         }
                         
@@ -212,34 +225,7 @@ class MenuController extends BaseAction implements BaseController {
                             // Write the contents back to the file
                         file_put_contents($file, $current);
                         }
-                        else {//A revoir
-                            //cas fils seulement
-                            foreach ($listMenu as $newMenu) {
-                                if($menuG->getId()==$newMenu["parent_id"]){
-                                    $titleFils=$newMenu["title"];
-                                    $nameFils=$newMenu["name"];
-                                    $textFils=$newMenu["text"];
-                                    
-                                    $file = $chemin.$repUser.$nameFils.'.php';
-                                    // Open the file to get existing content
-                                    //                         $current = file_get_contents($file);
-                                    // Append a new person to the file
-                                    //                         $current = "<?php
-                                    $current = "<?xml version='1.0' encoding='utf-8'?>
-                                <!doctype html><html>
-                                <head><meta charset='utf-8'>
-                                <title>$nameFils</title>
-                                </head><body>
-                                <h3>$textFils</h3>
-                                </body></html>
-                                 ";
-                                    // Write the contents back to the file
-                                    file_put_contents($file, $current);
-                                    
-                                    $hrefFils.='<a href="'.$nameFils.'.php?response="'.$numTel.'|'.$titleFils.'" >'.$titleFils.'</a><br/>';
-                                }
-                            }
-                        }
+                        
                         
                     }
                 }
@@ -247,6 +233,11 @@ class MenuController extends BaseAction implements BaseController {
                 
 //                 $this->doResult( 'Fichier '.$file.' créé avec succès');
                 $this->doSuccess(1, $this->parameters['GENERATED']);
+            }
+            else {
+                $this->doLogError($this->parameters['CODE_102_ADMIN']);
+                throw new ConstraintException('User null');
+            }
                 
             }else {
                 $this->doLogError($this->parameters['CODE_100_ADMIN']);

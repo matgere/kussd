@@ -26,9 +26,9 @@
 									okmenu.Generate(userId);
 								});
 						
-                                                // gestion des données de la liste des enregistrements 
+                                                // gestion des données de la liste des menus 
                         function onListReceived(data) {
-                             console.log(data);
+//                             console.log(data);
                                 $('.tree-tbody').empty();
                                 var html = '';
                                 $.each(data, function(key, value) {
@@ -67,7 +67,7 @@
                                         '</tr>';
                             
                               });
-                               console.log(html);
+//                               console.log(html);
                               $('.tree-tbody').append(html);
                                $("#tree").treeTable();
                         }
