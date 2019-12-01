@@ -23,8 +23,14 @@
 								});
 						
                                                 // gestion des données de la liste des enregistrements 
+      function sortByKeyAsc(array, key) {
+        return array.sort(function (a, b) {
+            var x = a[key]; var y = b[key];
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        });
+    }
                         function onListReceived(data) {
-                             console.log(data);
+                             console.log(sortByKeyAsc(data,'child-of-node-'));
                                 $('.tree-tbody').empty();
                                 var html = '';
                                 $.each(data, function(key, value) {
