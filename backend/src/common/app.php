@@ -44,6 +44,7 @@ class App {
 
     // Application actions
     const ACTION_GET_SESSION='GET_SESSION';
+     const ACTION_SIGN_IN='SIGN_IN';
      const ACTION_UPDATE='UPDATE';
      const ACTION_INSERT='INSERT';
      const ACTION_INSERT_FILE='INSERT_FILE';

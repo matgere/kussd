@@ -7,12 +7,12 @@
  */
 
 /**
- * Description of TestAdmisController
+ * Description of Controller
  *
- * @author lenovo
+ * @author Diodio MBODJ
  */
 
-namespace DA;
+namespace Menu;
 
 require_once '../../common/app.php';
 
@@ -28,8 +28,6 @@ use Menu\MenuManager as MenuManager;
 class MenuController extends BaseAction implements BaseController {
     
     private $commonManager;
-    private $testAdmiss;
-    private $testCandidat;
     private $menu;
     private $menuManager;
     
@@ -87,6 +85,22 @@ class MenuController extends BaseAction implements BaseController {
                                 $parent=$this->commonManager->findById("Menu\Menu", $request['parent']);
                                 $this->menu->setParent($parent);
                             }
+                            
+                            if($request['type']=="accesskey"){
+                                if(isset($request['ordre'])){
+                                    $this->menu->setOrdre($request['ordre']);
+                                    if($request['odre']!='ALL')
+                                        $this->menu->setOrdre($request['ordre']);
+                                        else {
+                                            $this->doLogError($this->parameters['CODE_101_ADMIN']);
+                                            throw new ConstraintException('Le champs ordre est vide');
+                                        }
+                                }
+                                else {
+                                    $this->doLogError($this->parameters['CODE_100_ADMIN']);
+                                    throw new ConstraintException($this->parameters['CODE_100']);
+                                }
+                            }
                             $this->menu->setType($request['type']);
                             $this->menu->setAction($request['actions']);
                             $this->menu->setMethode($request['methode']);
@@ -98,7 +112,7 @@ class MenuController extends BaseAction implements BaseController {
                             
                             if($menu!=null){
                                 $this->doSuccess($menu->getId(), $this->parameters['INSERT']);
-                                $this->doLogInfo('***************************************** Fin ajout Test *****************************************');
+                                $this->doLogInfo('***************************************** Fin ajout Menu *****************************************');
                                 
                             }
                             else {

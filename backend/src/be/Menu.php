@@ -1,6 +1,9 @@
 <?php
 namespace Menu;
 
+/**
+ * @author Diodio MBODJ
+ */
 use Be\BaseEntite as BaseEntite;
 /** @Entity @HasLifecycleCallbacks
  * @Table(name="ud_menu",uniqueConstraints={@UniqueConstraint(columns={"name", "user_id"})}) * */
@@ -30,7 +33,10 @@ class Menu extends  BaseEntite
     /**
      * @Column(type="string", length=200,nullable=true)
      * */
-    private $type;
+    private $type;/**
+    * @Column(type="integer")
+    * */
+    private $odre;
     /**
      * @Column(type="string", length=200,nullable=true)
      * */

@@ -63,7 +63,6 @@ class ComposerStaticInitd84324078eac9e0f5cbb7e606278da29
         'Common\\CommonQueries' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/common/CommonQueries.php',
         'Common\\Cookie' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/common/Cookie.php',
         'Common\\DoctrineLogger' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/common/DoctrineLogger.php',
-        'DA\\MenuController' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/menu/MenuController.php',
         'Exceptions\\BlockedNumberException' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/exception/BlockedNumberException.php',
         'Exceptions\\ConstraintException' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/exception/ConstraintException.php',
         'Exceptions\\EmptyMessageException' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/exception/EmptyMessageException.php',
@@ -76,6 +75,7 @@ class ComposerStaticInitd84324078eac9e0f5cbb7e606278da29
         'Exceptions\\UnknownIndicativeException' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/exception/UnknownIndicativeException.php',
         'Log\\Loggers' => __DIR__ . '/../../../..'.'/config' . '/Loggers.php',
         'Menu\\Menu' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/be/Menu.php',
+        'Menu\\MenuController' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/menu/MenuController.php',
         'Menu\\MenuManager' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/menu/MenuManager.php',
         'Menu\\MenuQueries' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/menu/MenuQueries.php',
         'Racine\\Bootstrap' => __DIR__ . '/../../../..'.'/config' . '/bootstrap.php',
@@ -83,6 +83,9 @@ class ComposerStaticInitd84324078eac9e0f5cbb7e606278da29
         'UVd\\DoctrineFunction\\UnixTimestamp' => __DIR__ . '/../../../..'.'/config' . '/../lib/DoctrineFunction/UnixTimestamp.php',
         'User\\Profil' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/be/Profil.php',
         'User\\User' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/be/User.php',
+        'User\\UserController' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/user/UserController.php',
+        'User\\UserManager' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/user/UserManager.php',
+        'User\\UserQueries' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/bo/user/UserQueries.php',
         'tools\\Tool' => __DIR__ . '/../../../..'.'/config' . '/../backend/src/tools/Tool.php',
     );
 

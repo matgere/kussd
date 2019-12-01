@@ -207,6 +207,38 @@ class MenuQueries extends \Bo\BaseAction implements \Bo\BaseQueries
               else
                   return null;
       }
+      
+      public function getAllParents($userId){
+          if ($userId != null) {
+            $stmt = Bootstrap::$entityManager->getConnection()->prepare(
+                "SELECT DISTINCT(parent_id) parent_id FROM ud_menu m WHERE m.user_id=$userId
+                                AND m.status=1 AND m.generate=1");
+            $stmt->execute(array(
+            ));
+            $result = $stmt->fetchAll();
+            if ($result != null) {
+                return $result;
+            } else {
+                return null;
+            }
+        }
+      }
+      
+      public function getAllMenuByParents($parent_id){
+        if ($parent_id != null) {
+            $stmt = Bootstrap::$entityManager->getConnection()->prepare(
+                "SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE
+                 m.status=1 AND m.generate=1 and parent_id = $parent_id");
+            $stmt->execute(array(
+            ));
+            $result = $stmt->fetchAll();
+            if ($result != null) {
+                return $result;
+            } else {
+                return null;
+            }
+        }
+      }
 
 }
 
