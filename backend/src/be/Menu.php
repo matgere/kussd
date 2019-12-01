@@ -36,7 +36,7 @@ class Menu extends  BaseEntite
     private $type;/**
     * @Column(type="integer")
     * */
-    private $odre;
+    private $ordre;
     /**
      * @Column(type="string", length=200,nullable=true)
      * */
@@ -283,6 +283,14 @@ class Menu extends  BaseEntite
         $this->user = $user;
     }
 
-    
+    function getOrdre() {
+        return $this->ordre;
+    }
+
+    function setOrdre($ordre) {
+        $this->ordre = $ordre;
+    }
+
+
 }
 

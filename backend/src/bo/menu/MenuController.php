@@ -70,6 +70,7 @@ class MenuController extends BaseAction implements BaseController {
     
     public function doInsert($request)
     {
+         $this->doLogInfo('List des parametres:' . $this->doGetListParam());
         try {
             if(isset($request['ACTION']) &&  isset($request['userId']) && isset($request['name']) && isset($request['title']) && isset($request['text']) &&
                 isset($request['parent']) && isset($request['type']) && isset($request['actions']) && isset($request['methode']) && isset($request['url'])){
@@ -89,18 +90,20 @@ class MenuController extends BaseAction implements BaseController {
                             if($request['type']=="accesskey"){
                                 if(isset($request['ordre'])){
                                     $this->menu->setOrdre($request['ordre']);
-                                    if($request['odre']!='ALL')
+                                    if($request['odre']!=='ALL')
                                         $this->menu->setOrdre($request['ordre']);
-                                        else {
-                                            $this->doLogError($this->parameters['CODE_101_ADMIN']);
-                                            throw new ConstraintException('Le champs ordre est vide');
-                                        }
+                                    else {
+                                        $this->doLogError($this->parameters['CODE_101_ADMIN']);
+                                        throw new ConstraintException('Le champs ordre est vide');
+                                    }
                                 }
-                                else {
-                                    $this->doLogError($this->parameters['CODE_100_ADMIN']);
-                                    throw new ConstraintException($this->parameters['CODE_100']);
-                                }
+//                                 else {
+//                                     $this->doLogError($this->parameters['CODE_100_ADMIN']);
+//                                     throw new ConstraintException($this->parameters['CODE_100']);
+//                                 }
                             }
+                            else
+                               $this->menu->setOrdre(0); 
                             $this->menu->setType($request['type']);
                             $this->menu->setAction($request['actions']);
                             $this->menu->setMethode($request['methode']);
@@ -245,7 +248,7 @@ class MenuController extends BaseAction implements BaseController {
                 }
 //                 $name=$request['name'];
                 
-//                 $this->doResult( 'Fichier '.$file.' créé avec succès');
+//                 $this->doResult( 'Fichier '.$file.' crï¿½ï¿½ avec succï¿½s');
                 $this->doSuccess(1, $this->parameters['GENERATED']);
                 
             }else {
