@@ -90,17 +90,17 @@ class MenuManager  extends BaseAction implements \Bo\BaseManager  {
     public function getAllMenuByUser($user){
         return $this->menuQueries->getAllMenuByUser($user);
 //        $allTab =array();
-//        $tab =array();
+//        $tab=array();
 //        $data = $this->menuQueries->getAllParents($user->getId());
 //        $i=0;
 //        foreach ($data as $key => $value) {
-//            $tabP=array();
+//            $tabP['menuParent'] = $value;
 //            $tabC=array();
 //            if($value['parent_id'] != null){
 //                $tabP['parent_id'] = $value['parent_id'];
-//                $dataInf = $this->menuQueries->getAllMenuByParents($value['parent_id']);
-//                $tabC['child'] = $dataInf;
-//                $arr = array_merge($tabP, $tabC);
+//                $dataParents = $this->menuQueries->getAllMenuByParents($value['parent_id']);
+//               
+//                $arr = array_merge($tabP, $dataParents);
 //                $allTab [] = $arr;
 //            }
 //            
@@ -109,7 +109,7 @@ class MenuManager  extends BaseAction implements \Bo\BaseManager  {
 //        }
 //       
 //        var_dump(json_encode($allTab));
-//        return;
+       // return;
     }
     
     public function getMenuTab($user){
