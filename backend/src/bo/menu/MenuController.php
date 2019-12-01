@@ -86,20 +86,20 @@ class MenuController extends BaseAction implements BaseController {
                                 $this->menu->setParent($parent);
                             }
                             
-                            if($request['type']=="accesskey"){
+                            if($request['type']==="accesskey"){
                                 if(isset($request['ordre'])){
                                     $this->menu->setOrdre($request['ordre']);
-                                    if($request['odre']!='ALL')
+                                    if($request['odre']!=='ALL')
                                         $this->menu->setOrdre($request['ordre']);
                                         else {
                                             $this->doLogError($this->parameters['CODE_101_ADMIN']);
                                             throw new ConstraintException('Le champs ordre est vide');
                                         }
                                 }
-                                else {
-                                    $this->doLogError($this->parameters['CODE_100_ADMIN']);
-                                    throw new ConstraintException($this->parameters['CODE_100']);
-                                }
+//                                 else {
+//                                     $this->doLogError($this->parameters['CODE_100_ADMIN']);
+//                                     throw new ConstraintException($this->parameters['CODE_100']);
+//                                 }
                             }
                             $this->menu->setType($request['type']);
                             $this->menu->setAction($request['actions']);

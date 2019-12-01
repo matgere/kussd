@@ -174,7 +174,7 @@
                             eParams += '&title=' + dialog.getModalBody().find('#titre_id').val();
                             eParams += '&text=' + dialog.getModalBody().find('#text_id').val();
                             eParams += '&parent=' + dialog.getModalBody().find('#parent_id').val();
-                            eParams += '&type=' + dialog.getModalBody().find('#type_id').val();
+                            eParams += '&type=' + dialog.getModalBody().find('#type_id:checked').val();
                             eParams += '&odre=' + dialog.getModalBody().find('#ordre_id').val();
                             eParams += '&actions=' + dialog.getModalBody().find('#actions_id').val();
                             eParams += '&methode=' + dialog.getModalBody().find('#methode_id').val();
