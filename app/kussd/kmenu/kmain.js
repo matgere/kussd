@@ -1,3 +1,7 @@
+
+/**
+ * @author Diodio MBODJ
+ */
 ;
 (function($) {
 	// -initialize the javascript

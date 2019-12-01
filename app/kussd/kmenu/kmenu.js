@@ -80,11 +80,6 @@
                                 <div class="col-12 col-sm-8 col-lg-7">\
                     		<select class="form-control form-control-xs" id="parent_id"  style="height:30px!important;">\
                     		<option value="ALL">Selectionner un parent</option>\
-                    		<option value="LANGUE">LANGUE</option>\
-  						  	<option value="FRANCAIS">FRANCAIS</option>\
-                    		<option value="PARAMETRAGE">PARAMETRAGE</option>\
-  						  	<option value="ENTREE-STOCK">ENTREE-STOCK</option>\
-  						  	<option value="ENTREE-PWD">ENTREE-PWD</option>\
                     		</select>\
                                 </div>\
                             </div>\
@@ -92,13 +87,23 @@
                             <div class="col-lg-6">\
                     		<div class="form-group row">\
                     		<label class="col-12 col-sm-4 col-form-label text-left text-sm-right">Type</label>\
-                    		<div class="col-12 col-sm-8 col-lg-7">\
+                    		<div class="col-12 col-sm-8 col-lg-30" >\
+                            <label class="custom-control custom-radio custom-control-inline">\
+                            <input class="custom-control-input type" type="radio" id="type_id" name="radio_type" value="input" checked=""><span class="custom-control-label">Form</span>\
+                          </label>\
                               <label class="custom-control custom-radio custom-control-inline">\
-                                <input class="custom-control-input" type="radio" id="type_id" name="radio_type" value="accesskey" checked=""><span class="custom-control-label">Menu</span>\
-                              </label>\
-                              <label class="custom-control custom-radio custom-control-inline">\
-                                <input class="custom-control-input" type="radio" id="type_id" name="radio_type" value="input"><span class="custom-control-label">Form</span>\
-                              </label>\
+                                <input class="custom-control-input type" type="radio" id="type_id" name="radio_type" value="accesskey" ><span class="custom-control-label">Menu</span>\
+                            <div class="col-12 col-sm-8 col-lg-7 hidden ordre">\
+                		<select class="form-control form-control-xs" id="ordre_id"  style="height:30px!important;width: 75px !important;">\
+                		<option value="ALL">Ordre</option>\
+                		<option value="1">1</option>\
+						  	<option value="2">2</option>\
+                		<option value="3">3</option>\
+						  	<option value="4">4</option>\
+						  	<option value="5">5</option>\
+                		</select>\
+                            </div>\
+                    		</label>\
                             </div>\
                             </div>\
                     		<div class="form-group row">\
@@ -111,10 +116,10 @@
                             <label class="col-12 col-sm-4 col-form-label text-left text-sm-right">Methode</label>\
                             <div class="col-12 col-sm-8 col-lg-7">\
                             <label class="custom-control custom-radio custom-control-inline">\
-                            <input class="custom-control-input" type="radio" id="methode_get" name="radio_methode" value="get" checked=""><span class="custom-control-label">GET</span>\
+                            <input class="custom-control-input" type="radio" id="methode_id" name="radio_methode" value="get" checked=""><span class="custom-control-label">GET</span>\
                           </label>\
                           <label class="custom-control custom-radio custom-control-inline">\
-                            <input class="custom-control-input" type="radio" id="methode_post" name="radio_methode" value="post"><span class="custom-control-label">POST</span>\
+                            <input class="custom-control-input" type="radio" id="methode_id" name="radio_methode" value="post"><span class="custom-control-label">POST</span>\
                           </label>\
                         </div>\
                         </div>\
@@ -144,6 +149,17 @@
     			 );
     			// Fin chargement des nationalite sur le form
     				
+    				//debut ordre
+    					$content.find('.type').change(
+    							function() {
+    		    					console.log($content.find('.type:checked').val());
+    								if($content.find('.type:checked').val()=="accesskey")
+    		    						$content.find('.ordre').removeClass('hidden');
+    								else
+    		    						$content.find('.ordre').addClass('hidden');
+    							});
+    				//fin ordre
+    				
                     return $content;
                 },
                 buttons: [
@@ -159,10 +175,11 @@
                             eParams += '&text=' + dialog.getModalBody().find('#text_id').val();
                             eParams += '&parent=' + dialog.getModalBody().find('#parent_id').val();
                             eParams += '&type=' + dialog.getModalBody().find('#type_id').val();
+                            eParams += '&odre=' + dialog.getModalBody().find('#ordre_id').val();
                             eParams += '&actions=' + dialog.getModalBody().find('#actions_id').val();
                             eParams += '&methode=' + dialog.getModalBody().find('#methode_id').val();
                             eParams += '&url=' + dialog.getModalBody().find('#url_id').val();
-                            console.log(dialog.getModalBody().find('#parent_id').val());
+                            console.log(dialog.getModalBody().find('#ordre_id').val());
                                 $.post(o.addMenuUrl, eParams, function (serverResponse) {
 //                                    console.log(serverResponse);
                                 	serverResponse = $.parseJSON(serverResponse);
