@@ -183,7 +183,7 @@ class MenuQueries extends \Bo\BaseAction implements \Bo\BaseQueries
         if ($user != null) {
             $stmt = Bootstrap::$entityManager->getConnection()->prepare(
                 "SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
-                                AND m.status=1 AND m.generate=1 order by id,parent_id");
+                                AND m.status=1 AND m.generate=1 order by parent_id");
             $stmt->execute(array(
                 'user' => $user->getId()
             ));
