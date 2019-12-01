@@ -72,7 +72,7 @@
                             <div class="form-group row">\
                     		<label class="col-12 col-sm-4 col-form-label text-left text-sm-right">Text</label>\
                     		<div class="col-12 col-sm-8 col-lg-7">\
-                            <input class="form-control form-control-sm" type="text" name="text_name" id="text_id" placeholder="">\
+                            <textarea class="form-control form-control-sm" name="text_name" id="text_id" ></textarea>\
                             </div>\
                             </div>\
                             <div class="form-group row">\
