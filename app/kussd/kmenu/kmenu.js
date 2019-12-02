@@ -185,7 +185,8 @@
                                 	serverResponse = $.parseJSON(serverResponse);
 									if (serverResponse.rc === 0) {
                                 	new PNotify({type: 'success', title: 'Univers Edu', text: serverResponse.message});
-									dialog.close();
+									self.GetAllMenuByUser(userId, onDataReceivedMenu, null);
+                                	dialog.close();
 									dialog.getModalBody().off();
 									dialog.getModalBody().empty();
 									}
@@ -233,6 +234,51 @@
         function onError() {
         	new PNotify({type: 'error', title: 'Univers Edu', text: serverResponse.error});
         }
+        
+        function onDataReceivedMenu(data) {
+          console.log(data);
+             $('.tree-tbody').empty();
+             var html = '';
+             $.each(data, function(key, value) {
+                  var node_id="";
+                 var node_class="";
+                 var empty_values='Neant';
+                 node_id = "node-" + value.id
+                 if(value.parent_id != null){
+                     node_class="child-of-node-" + value.parent_id;
+                    
+                 }
+                    //class="'+node_class+'" 
+                 html += '<tr id="'+node_id+'" class="'+node_class+'" >';
+                         if(value.title != null)
+                            html +=  '<td>'+value.title+'</td>';
+                          else
+                              html += '<td>'+empty_values+'</td>';
+                           if(value.text != null)
+                             html += '<td>'+value.text+'</td>';
+                          else
+                              html += '<td>'+empty_values+'</td>';
+                           if(value.type != null)
+                             html +=  '<td>'+value.type+'</td>';
+                         if(value.parent_id != null)
+                        html +=  '<td>'+value.parent_id+'</td>';
+                          else
+                             html +=  '<td>'+empty_values+'</td>';
+                             if(value.methode != null && value.methode != 'undefined')
+                        html +=  '<td>'+value.methode+'</td>';
+                          else
+                              html +=  '<td>'+empty_values+'</td>';
+                          if(value.url != null)
+                              html +=  '<td>'+value.url+'</td>';
+                          else
+                              html += '<td>'+empty_values+'</td>';
+                     '</tr>';
+         
+           });
+//            console.log(html);
+           $('.tree-tbody').html(html);
+            $("#tree").treeTable();
+     }
 
    return construct(options);
     };

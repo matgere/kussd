@@ -66,18 +66,16 @@ Class User extends BaseEntite {
     
     /**
      * @Column(type="string", length=200, nullable=true)
-      /
+     * */
     private $repName;
     
     /**
      * @Column(type="string", length=200, nullable=true)
-      /
+     * */
     private $numTel;
 
-    /**
-     * @Column(type="string", length=200, nullable=true)
-      /
-    private $activateUser;
+    
+
     /**
      * @return mixed
      */

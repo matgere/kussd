@@ -138,121 +138,88 @@ class MenuController extends BaseAction implements BaseController {
             $this->doError('-1', $this->parameters['ERREUR_SERVEUR']);
         }
     }
-
-    // isset($request['userId']) && isset($request['note'])&& isset($request['commentaire']) &&
-    //  && $request['note'] != '' && $request['commentaire'] != ''&& $request['userId'] != ''
-    public function doGenerateMenu($request) {
+    
+    public function doGenerateMenu($request){
         try {
             //rep
-            $chemin = '/Applications/MAMP/htdocs/ussddynamic/';
-            $repUser = 'ussdgenerate';
-            $tagFils = '';
+            $chemin='C:/xampp/htdocs/';
+            $repUser='ussdgenerate/';
+            $tagChild="";
+            $index="index";
             $this->doLogInfo("Debut du doGenerateMenu");
             $this->doLogInfo('List des parametres:' . $this->doGetListParam());
-            if (isset($request['ACTION']) && isset($request['userId'])) {
-
+            if (isset($request['ACTION']) && isset($request['userId']) ){
+                
                 $user = $this->menuManager->findById("User\User", $request['userId']);
-                if ($user != null) {
-                    if ($user->getRepName() != null)
-                        $repUser = $user->getRepName() . '/';
+                if($user!=null){
+                    if($user->getRepName()!=null)
+                        $repUser=$user->getRepName().'/';
+                    else 
+                        $repUser=$repUser.$user->getId().'/';
+                        $dest=$chemin.$repUser;
+                        if (!file_exists($dest))
+                            mkdir($dest, 0777, true);
+                        
+                   //Menu Parent
+                   $masterParent=$this->menuManager->getMasterParent($user);
+                   if($masterParent!=null){
+                    $masterId=$masterParent['id'];
+                    $masterType=$masterParent['type'];
+                    $masterText=$masterParent['text'];
+                    $masterName=$masterParent['name'];
+                    $masterOrdre=$masterParent['ordre'];
+                    $masterTitle=$masterParent['title'];
+                    $this->doLogInfo('Master Menu Id:' . $masterId);
+                    
+                    if($masterType=="accesskey"){
+                        $listMenuChild=$this->menuManager->getAllChildByParentId($masterId);
+                        foreach ($listMenuChild as $unMenu) {
+                            $menuChild=$this->commonManager->findById("Menu\Menu", $unMenu["id"]);
+                            $this->doLogInfo('menuChildId:' . $menuChild->getId());
+                                
+                            $titleChild=$menuChild->getTitle();
+                            $nameChild=$menuChild->getName();
+                            $textChild=$menuChild->getText();
+                            $typeChild=$menuChild->getType();
+                            $urlChild=$menuChild->getUrl();
+                            $ordreChild=$menuChild->getOrdre();
+                                        
+                            $file = $chemin.$repUser.$nameChild.'.php';
+                        
+                        if($typeChild=="accesskey")
+                            $tagChild.='<a href="'.$nameChild.'.php?response="'.$titleChild.'" >'.$titleChild.'</a><br/>';
+                            }
+                    }
                     else
-                        $repUser = $repUser . '' . $user->getId() . '/';
-                    $dest = $chemin . $repUser;
-                    if (!file_exists($dest))
-                        mkdir($dest, 0777, true);
-                    $listMenu = $this->menuManager->getAllMenuByUser($user);
-
-//                 var_dump($user);
-//                 $listMenuJ=json_encode($listMenu)x;
-//                 $this->doLogInfo('List des menus:' . $listMenuJ);
-                    if ($listMenu != null) {
-                        foreach ($listMenu as $unMenu) {
-                            $menuG = $this->commonManager->findById("Menu\Menu", $unMenu["id"]);
-                            $this->doLogInfo('menuId:' . $menuG->getId());
-//                         if($menuG->getParent()==null){
-                            // $this->doLogInfo('parent null');
-                            $nameParent = $menuG->getName();
-                            $textParent = $menuG->getText();
-                            foreach ($listMenu as $newMenu) {
-                                if ($menuG->getId() == $newMenu["parent_id"]) {
-                                    //  var_dump($newMenu);
-                                    $titleFils = $newMenu["title"];
-                                    $nameFils = $newMenu["name"];
-                                    $textFils = $newMenu["text"];
-                                    $typeFils = $newMenu["type"];
-                                    $urlFils = $newMenu["url"];
-                                    $ordre = $newMenu["ordre"];
-                                    $file = $chemin . $repUser . $nameFils . '.php';
-                                    // Open the file to get existing content
-                                    //                         $current = file_get_contents($file);
-                                    // Append a new person to the file
-                                    //                         $current = "<?php
-                                    $current = "<?xml version='1.0' encoding='utf-8'?>
-                                    <!doctype html><html>
-                                    <head><meta charset='utf-8'>
-                                    <title>$nameFils</title>
-                                    </head><body>
-                                    <h3>$textFils</h3>
-                                    </body></html>
-                                     ";
-                                    // Write the contents back to the file
-                                    file_put_contents($file, $current);
-                                    $tagFils = "";
-                                    $tagForm = "";
-
-                                    if ($ordre > 0) {
-                                        $tagFils .= '<a href="' . $nameFils . '.php?response="' . $titleFils . '" >' . $titleFils . '</a><br/>';
-
-                                        $file = $chemin . $repUser . $nameParent . '.php';
-                                        // Open the file to get existing content
-                                        //                         $current = file_get_contents($file);
-                                        // Append a new person to the file
-                                        //                         $current = "<?php
-                                        $current = "<?xml version='1.0' encoding='utf-8'?>
-                                        <!doctype html><html>
-                                        <head><meta charset='utf-8'>
-                                        <title>$nameParent</title>
-                                        </head><body>
-                                        <h3>$textParent</h3>
-                                            $tagFils
-                                        </body></html>";
-                                        // Write the contents back to the file
-                                        file_put_contents($file, $current);
-                                    } else {
-                                        $tagForm .= '<form action="langue.php"><input type="text" name="response"/></form>';
-
-                                        $file = $chemin . $repUser . $nameParent . '.php';
-                                        // Open the file to get existing content
-                                        //                         $current = file_get_contents($file);
-                                        // Append a new person to the file
-                                        //                         $current = "<?php
-                                        $current = "<?xml version='1.0' encoding='utf-8'?>
+                        if($masterType=="input")
+                       $tagChild='<form action="index.php"><input type="text" name="response"/></form>';
+                            
+                 
+                    $file = $chemin.$repUser.$index.'.php';
+                    $current = "<?xml version='1.0' encoding='utf-8'?>
                         <!doctype html><html>
                         <head><meta charset='utf-8'>
-                        <title>$nameParent</title>
+                        <title>$masterName</title>
                         </head><body>
-                        <h3>$textParent</h3>
-                            $tagForm
+                        <h3>$masterText</h3>
+                        $tagChild
                         </body></html>
                          ";
-                                        // Write the contents back to the file
-                                        file_put_contents($file, $current);
-                                    }
-                                }
-                            }
-
-
-                            //                         }
-                        }
-                    }
-//                 $name=$request['name'];
-//                 $this->doResult( 'Fichier '.$file.' crï¿½ï¿½ avec succï¿½s');
-                    $this->doSuccess(1, $this->parameters['GENERATED']);
-                } else {
-                    $this->doLogError($this->parameters['CODE_102_ADMIN']);
-                    throw new ConstraintException('User null');
+                            // Write the contents back to the file
+                            file_put_contents($file, $current);
+                    // Open the file to get existing content
+                
+//                 $this->doResult( 'Fichier '.$file.' cr�� avec succ�s');
+                $this->doSuccess(1, $this->parameters['GENERATED']);
                 }
-            } else {
+                
+            }
+            else {
+                $this->doLogError($this->parameters['CODE_102_ADMIN']);
+                throw new ConstraintException('User null');
+            }
+                
+            }else {
                 $this->doLogError($this->parameters['CODE_100_ADMIN']);
                 throw new ConstraintException($this->parameters['CODE_100']);
             }

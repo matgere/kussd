@@ -28,51 +28,57 @@
 									okmenu.Generate(userId);
 								});
 						
-                                                // gestion des données de la liste des enregistrements 
-      
+                                                // gestion des données de la liste des menus 
                         function onListReceived(data) {
-                                $('.tree-tbody').empty();
-                                var html = '';
-                                console.log(data);
-                                $.each(data, function(key, value) {
-                                    
-                                     var node_id="";
-                                    var node_class="";
-                                    var empty_values='Neant';
-                                    node_id = "node-" + value.id
-                                    if(value.parent_id != null){
-                                        node_class="child-of-node-" + value.parent_id;
-                                       
-                                    }
-                                       //class="'+node_class+'" 
-                                    html += '<tr id="'+node_id+'" class="'+node_class+'" >';
-                                            if(value.title != null)
-                                               html +=  '<td>'+value.title+'</td>';
-                                             else
-                                                 html += '<td>'+empty_values+'</td>';
-                                              if(value.text != null)
-                                                html += '<td>'+value.text+'</td>';
-                                             else
-                                                 html += '<td>'+empty_values+'</td>';
-                                              if(value.type != null)
-                                                html +=  '<td>'+value.type+'</td>';
-                                            if(value.parent_id != null)
-                                           html +=  '<td>'+value.parent_id+'</td>';
-                                             else
-                                                html +=  '<td>'+empty_values+'</td>';
-                                                if(value.methode != null && value.methode != 'undefined')
-                                           html +=  '<td>'+value.methode+'</td>';
-                                             else
-                                                 html +=  '<td>'+empty_values+'</td>';
-                                             if(value.url != null)
-                                                 html +=  '<td>'+value.url+'</td>';
-                                             else
-                                                 html += '<td>'+empty_values+'</td>';
-                                        '</tr>';
                             
-                              });
-                              $('.tree-tbody').append(html);
-                               $("#tree").treeTable();
+                             data = sortByKey(data);
+                             var parent = [];
+                             $.each(data, function(key, value){
+                                 if(valueparent_id )
+                                parent.push(key, value);
+                            });
+                            console.log(parent);
+//                                $('.tree-tbody').empty();
+//                                var html = '';
+//                                $.each(data, function(key, value) {
+//                                    
+//                                     var node_id="";
+//                                    var node_class="";
+//                                    var empty_values='Neant';
+//                                    node_id = "node-" + value.id
+//                                    if(value.parent_id != null){
+//                                        node_class="child-of-node-" + value.parent_id;
+//                                       
+//                                    }
+//                                       //class="'+node_class+'" 
+//                                    html += '<tr id="'+node_id+'" class="'+node_class+'" >';
+//                                            if(value.title != null)
+//                                               html +=  '<td>'+value.title+'</td>';
+//                                             else
+//                                                 html += '<td>'+empty_values+'</td>';
+//                                              if(value.text != null)
+//                                                html += '<td>'+value.text+'</td>';
+//                                             else
+//                                                 html += '<td>'+empty_values+'</td>';
+//                                              if(value.type != null)
+//                                                html +=  '<td>'+value.type+'</td>';
+//                                            if(value.parent_id != null)
+//                                           html +=  '<td>'+value.parent_id+'</td>';
+//                                             else
+//                                                html +=  '<td>'+empty_values+'</td>';
+//                                                if(value.methode != null && value.methode != 'undefined')
+//                                           html +=  '<td>'+value.methode+'</td>';
+//                                             else
+//                                                 html +=  '<td>'+empty_values+'</td>';
+//                                             if(value.url != null)
+//                                                 html +=  '<td>'+value.url+'</td>';
+//                                             else
+//                                                 html += '<td>'+empty_values+'</td>';
+//                                        '</tr>';
+//                            
+//                              });
+//                              $('.tree-tbody').append(html);
+//                               $("#tree").treeTable();
                         }
                         
                         function onError() {
@@ -121,6 +127,13 @@
                             });
 
                             return newObj;
+                        }
+                        
+                        function sortByKey(array, key) {
+                            return array.sort(function(a, b) {
+                                var x = a[key]; var y = b[key];
+                                return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+                            });
                         }
 });
 }(jQuery));

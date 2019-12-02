@@ -41,20 +41,22 @@
         <div class="be-wrapper">
             <nav class="navbar navbar-expand fixed-top be-top-header">
                 <div class="container-fluid">
-                    <div class="be-navbar-header"><a class="navbar-brand" href="#" style="background-image:none;">USSD Dynamic</a>
+                    <div class="be-navbar-header"><a class="navbar-brand" href="#" style="background-image:none; font-size: 20px;">KUSSD+</a>
                     </div>
                 </div>
             </nav>
-            <div class="">
-                <div class="page-head">
+<!--             <div class=""> -->
+                <div class="page-head" style=" top: -10px;">
+                <div class="btn-toolbar float-left margin-bottom">
+                	<h3 style="color: #14181f; font-family: bold;">Menus</h3>
+                </div>
                     <div class="btn-toolbar float-right margin-bottom">
                         <div class="btn-group btn-space mr-2">
-                            <button id="btn_newMenu" class="btn btn-secondary" type="button" title="Ajouter un nouveau menu" data-toggle="tooltip" data-placement="bottom"><i class="icon mdi mdi-plus"></i></button>
+                            <button id="btn_newMenu" class="btn btn-secondary" type="button" title="Ajouter un nouveau Menu USSD" data-toggle="tooltip" data-placement="bottom"><i class="icon mdi mdi-plus"></i></button>
                         </div>
                         <div class="btn-group btn-space mr-2">
                             <button id="btn_generateMenu" class="btn btn-secondary" type="button" title="generer menu(s)" data-toggle="tooltip" data-placement="bottom"><i class="icon mdi mdi-play"></i></button>
                         </div>
-
                     </div>
                 </div>
                 <div class="main-content container-fluid">
@@ -78,7 +80,7 @@
                         </table>
                     </div>
                 </div>
-            </div>   
+<!--             </div>    -->
         </div>
         <!--      </div> -->
 
