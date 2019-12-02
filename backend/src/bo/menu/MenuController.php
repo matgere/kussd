@@ -150,6 +150,7 @@ class MenuController extends BaseAction implements BaseController {
     public function doGenerateMenu($request){
         try {
             //rep
+//             $chemin=getcwd();
             $chemin='C:/xampp/htdocs/';
             $repUser='ussdgenerate/';
             $tagChild="";
