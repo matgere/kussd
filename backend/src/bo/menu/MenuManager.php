@@ -84,14 +84,24 @@ class MenuManager extends BaseAction implements \Bo\BaseManager {
     public function findByCode($entity, $entityCode) {
         return $this->commonManager->findByCode($entity, $entityCode);
     }
+    
+     public function getAllMenuByUser($user) {
+         return $this->menuQueries->getAllMenuByUser($user);
+         
+     }
 
-    public function getAllMenuByUser($user) {
-        // return $this->menuQueries->getAllMenuByUser($user);
+    public function getAllMenusArray($user) {
+        
+        $listMenus =array();
         $masterParent = $this->menuQueries->getMasterParent($user);
-
+        $masterParentArray= array();
+        $masterParentArray['Parent'] = $masterParent['title'];
+        $masterParentArray['id'] = $masterParent['id'];
+        $listMenus[] = $masterParentArray;
         $listMenuChild = $this->menuQueries->getAllChildByParentId($masterParent['id']);
-        foreach ($listMenuChild as $unMenu) {
-            $menuChild = $this->commonManager->findById("Menu\Menu", $unMenu["id"]);
+        foreach ($listMenuChild as $unMenuChild) {
+            
+            $menuChild = $this->commonManager->findById("Menu\Menu", $unMenuChild["id"]);
             $this->doLogInfo('menuChildId:' . $menuChild->getId());
             $titleChild = $menuChild->getTitle();
             $nameChild = $menuChild->getName();
@@ -99,18 +109,83 @@ class MenuManager extends BaseAction implements \Bo\BaseManager {
             $typeChild = $menuChild->getType();
             $urlChild = $menuChild->getUrl();
             $ordreChild = $menuChild->getOrdre();
-            $listMenuChild2=$this->menuManager->getAllChildByParentId($unMenu["id"]);
-            foreach ($listMenuChild as $unMenuChild) {
-                $menuChild2 = $this->commonManager->findById("Menu\Menu", $unMenuChild["id"]);
+            
+            $menuChildArray1 = array();
+            $menuChildArray1 ['parent_id']= $menuChild->getParent()->getId();  
+            $menuChildArray1 ['parent_name']= $menuChild->getParent()->getName();  
+            $menuChildArray1 ['id']= $menuChild->getId(); 
+            $menuChildArray1 ['title']= $titleChild;  
+            $menuChildArray1 ['name']= $nameChild;  
+            $menuChildArray1 ['type']= $typeChild;  
+            $menuChildArray1 ['text']= $textChild;  
+            $menuChildArray1 ['url']= $urlChild;  
+            $menuChildArray1 ['ordre']= $ordreChild;  
+            $listMenus[] = $menuChildArray1;
+            
+            $listMenuChild2=$this->menuQueries->getAllChildByParentId($unMenuChild["id"]);
+            //var_dump($listMenuChild2);
+            foreach ($listMenuChild2 as $unMenuChild2) {
+                 $menuChild2 = array();
+                $menuChild2 = $this->commonManager->findById("Menu\Menu", $unMenuChild2["id"]);
                 $titleChild2 = $menuChild2->getTitle();
                 $nameChild2 = $menuChild2->getName();
                 $textChild2 = $menuChild2->getText();
                 $typeChild2 = $menuChild2->getType();
                 $urlChild2 = $menuChild2->getUrl();
                 $ordreChild2 = $menuChild2->getOrdre();
-                var_dump($titleChild .' parent de '.$titleChild2 );
+               // $menuChildArray2 ['title']= $titleChild2;  
+               // $listMenus['child1'] = $menuChildArray2;
+               // 
+               // 
+                 //var_dump($titleChild .' parent de '.$titleChild2 );
+                //var_dump($unMenuChild2["id"] .' ==== '.$menuChild2->getId() );
+                
+                
+                $menuChildArray2 = array();
+                $menuChildArray2 ['id']= $menuChild2->getId(); 
+                $menuChildArray2 ['parent_id']= $menuChild2->getParent()->getId();  
+                $menuChildArray2 ['parent_name']= $menuChild2->getParent()->getName();
+                $menuChildArray2 ['title']= $titleChild2;  
+                $menuChildArray2 ['name']= $nameChild2;  
+                $menuChildArray2 ['type']= $typeChild2;  
+                $menuChildArray2 ['text']= $textChild2;  
+                $menuChildArray2 ['url']= $urlChild2;  
+                $menuChildArray2 ['ordre']= $ordreChild2;  
+                $listMenus[] = $menuChildArray2;
+            
+                $listMenuChild3=$this->menuQueries->getAllChildByParentId($unMenuChild2["id"]);
+              //var_dump($listMenuChild3);  
+            foreach ($listMenuChild3 as $unMenuChild3) {
+                 //$menuChild3 = array();
+                $menuChild3 = $this->commonManager->findById("Menu\Menu", $unMenuChild3["id"]);
+                $titleChild3 = $menuChild3->getTitle();
+                $nameChild3 = $menuChild3->getName();
+                $textChild3 = $menuChild3->getText();
+                $typeChild3 = $menuChild3->getType();
+                $urlChild3 = $menuChild3->getUrl();
+                $ordreChild3 = $menuChild3->getOrdre();
+                 //var_dump($titleChild2 .' bis -- parent de '.$titleChild3 );
+               
+                $menuChildArray3 = array();
+             $menuChildArray3 ['id']= $menuChild3->getId();   
+            $menuChildArray3 ['parent_id']= $menuChild3->getParent()->getId();
+            $menuChildArray3 ['parent_name']= $menuChild3->getParent()->getName();  
+            $menuChildArray3 ['title']= $titleChild3;  
+            $menuChildArray3 ['name']= $nameChild3; 
+            $menuChildArray3 ['type']= $typeChild3;   
+            $menuChildArray3 ['text']= $textChild3;  
+            $menuChildArray3 ['url']= $urlChild3;  
+            $menuChildArray3 ['ordre']= $ordreChild3;   
+                $listMenus[] = $menuChildArray3;
             }
+               
+                
+                
+               
+            }
+            
         }
+        return $listMenus;
     }
 
     public function getMenuTab($user) {
@@ -119,12 +194,12 @@ class MenuManager extends BaseAction implements \Bo\BaseManager {
             
         }
     }
-
-    public function getMasterParent($parent) {
+    
+    public function getMasterParent($parent){
         return $this->menuQueries->getMasterParent($parent);
     }
-
-    public function getAllChildByParentId($parent) {
+    
+    public function getAllChildByParentId($parent){
         return $this->menuQueries->getAllChildByParentId($parent);
     }
 

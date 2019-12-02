@@ -186,8 +186,9 @@ class MenuController extends BaseAction implements BaseController {
                                         
                             $file = $chemin.$repUser.$nameChild.'.php';
                         
-                        if($typeChild=="accesskey")
-                            $tagChild.='<a href="'.$nameChild.'.php?response="'.$titleChild.'" >'.$titleChild.'</a><br/>';
+//                             if($typeChild=="accesskey"){
+                            $tagChild.='<a href="'.$nameChild.'.php?response="'.$titleChild.'" accesskey="'.$ordreChild.'" >'.$titleChild.'</a><br/>';
+                            
                             }
                     }
                     else
@@ -244,8 +245,8 @@ class MenuController extends BaseAction implements BaseController {
             $this->doLogInfo('List des parametres:' . $this->doGetListParam());
             if (isset($request['ACTION']) && isset($request['userId'])) {
                 $user = $this->commonManager->findById("User\User", $request['userId']);
-                $listMenu = $this->menuManager->getAllMenuByUser($user);
-//                 var_dump($listMenu);
+                $listMenu = $this->menuManager->getAllMenusArray($user);
+            //    var_dump($listMenu);
 //                 $listMenu=json_encode($listMenu);
 //                 $this->doLogInfo('List menu:' . $listMenu);
 

@@ -76,6 +76,8 @@ Class User extends BaseEntite {
 
     
 
+    
+
     /**
      * @return mixed
      */
@@ -99,6 +101,7 @@ Class User extends BaseEntite {
     {
         $this->repName = $repName;
     }
+    
 
     /**
      * @param mixed $numTel

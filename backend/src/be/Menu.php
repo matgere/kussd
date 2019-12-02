@@ -33,10 +33,15 @@ class Menu extends  BaseEntite
     /**
      * @Column(type="string", length=200,nullable=true)
      * */
-    private $type;/**
+    private $type;
+    /**
     * @Column(type="integer")
     * */
     private $ordre;
+    /**
+     * @Column(type="integer")
+     * */
+    private $etape;
     /**
      * @Column(type="string", length=200,nullable=true)
      * */
@@ -67,6 +72,22 @@ class Menu extends  BaseEntite
     
     
     
+    /**
+     * @return mixed
+     */
+    public function getEtape()
+    {
+        return $this->etape;
+    }
+
+    /**
+     * @param mixed $etape
+     */
+    public function setEtape($etape)
+    {
+        $this->etape = $etape;
+    }
+
     /**
      * @return mixed
      */

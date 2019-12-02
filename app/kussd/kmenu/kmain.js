@@ -30,55 +30,70 @@
 						
                                                 // gestion des données de la liste des menus 
                         function onListReceived(data) {
+                             //console.log(data);
+                                $('.tree-tbody').empty();
+                                var html = '';
+                                $.each(data, function(key, value) {
+                                    console.log(value.Parent);
+                                     var node_id="";
+                                    var node_class="";
+                                    var empty_values='Neant';
+                                   
+                                    var title='';
+                                        var type='';
+                                        var parent_id='';
+                                        var parent_name='';
+                                        var text='';
+                                        var methode='';
+                                        var url='';
+                                        var ordre='';
+                                    if(typeof value.Parent != 'undefined'){
+                                        node_id = "node-" + value.id;
+                                        title = value.Parent;
+                                    }
+                                    else if(typeof value.Parent == 'undefined'){
+                                         node_id = "node-" + value.id;
+                                         node_class="child-of-node-" + value.parent_id;
+                                            parent_name = value.parent_name;
+                                            title = value.title;
+                                            type = value.type +', seq: '+value.ordre;
+                                            text = value.text;
+                                            parent_id = value.parent_id;
+                                            methode = value.methode;
+                                            url = value.url;
+                                            //ordre = value.ordre;
+                                    }
+                                        
+                                       //class="'+node_class+'" 
+                                    html += '<tr id="'+node_id+'" class="'+node_class+'" >';
+                                            if(title != null )
+                                               html +=  '<td>'+title+'</td>';
+                                             else
+                                                 html += '<td>'+empty_values+'</td>';
+                                              if(value.text != null)
+                                                html += '<td>'+text+'</td>';
+                                             else
+                                                 html += '<td>'+empty_values+'</td>';
+                                              if(value.type != null)
+                                                html +=  '<td>'+type+'</td>';
+                                            if(value.parent_name != null)
+                                           html +=  '<td>'+parent_name+'</td>';
+                                             else
+                                                html +=  '<td>'+empty_values+'</td>';
+                                                if(value.methode != null && value.methode != 'undefined')
+                                           html +=  '<td>'+methode+'</td>';
+                                             else
+                                                 html +=  '<td>'+empty_values+'</td>';
+                                             if(value.url != null)
+                                                 html +=  '<td>'+url+'</td>';
+                                             else
+                                                 html += '<td>'+empty_values+'</td>';
+                                        '</tr>';
                             
-                             data = sortByKey(data);
-                             var parent = [];
-                             $.each(data, function(key, value){
-                                 if(valueparent_id )
-                                parent.push(key, value);
-                            });
-                            console.log(parent);
-//                                $('.tree-tbody').empty();
-//                                var html = '';
-//                                $.each(data, function(key, value) {
-//                                    
-//                                     var node_id="";
-//                                    var node_class="";
-//                                    var empty_values='Neant';
-//                                    node_id = "node-" + value.id
-//                                    if(value.parent_id != null){
-//                                        node_class="child-of-node-" + value.parent_id;
-//                                       
-//                                    }
-//                                       //class="'+node_class+'" 
-//                                    html += '<tr id="'+node_id+'" class="'+node_class+'" >';
-//                                            if(value.title != null)
-//                                               html +=  '<td>'+value.title+'</td>';
-//                                             else
-//                                                 html += '<td>'+empty_values+'</td>';
-//                                              if(value.text != null)
-//                                                html += '<td>'+value.text+'</td>';
-//                                             else
-//                                                 html += '<td>'+empty_values+'</td>';
-//                                              if(value.type != null)
-//                                                html +=  '<td>'+value.type+'</td>';
-//                                            if(value.parent_id != null)
-//                                           html +=  '<td>'+value.parent_id+'</td>';
-//                                             else
-//                                                html +=  '<td>'+empty_values+'</td>';
-//                                                if(value.methode != null && value.methode != 'undefined')
-//                                           html +=  '<td>'+value.methode+'</td>';
-//                                             else
-//                                                 html +=  '<td>'+empty_values+'</td>';
-//                                             if(value.url != null)
-//                                                 html +=  '<td>'+value.url+'</td>';
-//                                             else
-//                                                 html += '<td>'+empty_values+'</td>';
-//                                        '</tr>';
-//                            
-//                              });
-//                              $('.tree-tbody').append(html);
-//                               $("#tree").treeTable();
+                              });
+//                               console.log(html);
+                              $('.tree-tbody').append(html);
+                               $("#tree").treeTable();
                         }
                         
                         function onError() {
