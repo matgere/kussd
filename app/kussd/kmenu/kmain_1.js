@@ -28,70 +28,47 @@
 									okmenu.Generate(userId);
 								});
 						
-                                                // gestion des données de la liste des menus 
+                                                // gestion des données de la liste des enregistrements 
+      
                         function onListReceived(data) {
-                             //console.log(data);
                                 $('.tree-tbody').empty();
                                 var html = '';
                                 $.each(data, function(key, value) {
-                                    console.log(value.Parent);
                                      var node_id="";
                                     var node_class="";
                                     var empty_values='Neant';
-                                   
-                                    var title='';
-                                        var type='';
-                                        var parent_id='';
-                                        var parent_name='';
-                                        var text='';
-                                        var methode='';
-                                        var url='';
-                                        var ordre='';
-                                    if(typeof value.Parent != 'undefined'){
-                                        node_id = "node-" + value.id;
-                                        title = value.Parent;
+                                    node_id = "node-" + value.id
+                                    if(value.parent_id != null){
+                                        node_class="child-of-node-" + value.parent_id;
+                                       
                                     }
-                                    else if(typeof value.Parent == 'undefined'){
-                                         node_id = "node-" + value.id;
-                                         node_class="child-of-node-" + value.parent_id;
-                                            parent_name = value.parent_name;
-                                            title = value.title;
-                                            type = value.type +', seq: '+value.ordre;
-                                            text = value.text;
-                                            parent_id = value.parent_id;
-                                            methode = value.methode;
-                                            url = value.url;
-                                            //ordre = value.ordre;
-                                    }
-                                        
                                        //class="'+node_class+'" 
                                     html += '<tr id="'+node_id+'" class="'+node_class+'" >';
-                                            if(title != null )
-                                               html +=  '<td>'+title+'</td>';
+                                            if(value.title != null)
+                                               html +=  '<td>'+value.title+'</td>';
                                              else
                                                  html += '<td>'+empty_values+'</td>';
                                               if(value.text != null)
-                                                html += '<td>'+text+'</td>';
+                                                html += '<td>'+value.text+'</td>';
                                              else
                                                  html += '<td>'+empty_values+'</td>';
                                               if(value.type != null)
-                                                html +=  '<td>'+type+'</td>';
-                                            if(value.parent_name != null)
-                                           html +=  '<td>'+parent_name+'</td>';
+                                                html +=  '<td>'+value.type+'</td>';
+                                            if(value.parent_id != null)
+                                           html +=  '<td>'+value.parent_id+'</td>';
                                              else
                                                 html +=  '<td>'+empty_values+'</td>';
                                                 if(value.methode != null && value.methode != 'undefined')
-                                           html +=  '<td>'+methode+'</td>';
+                                           html +=  '<td>'+value.methode+'</td>';
                                              else
                                                  html +=  '<td>'+empty_values+'</td>';
                                              if(value.url != null)
-                                                 html +=  '<td>'+url+'</td>';
+                                                 html +=  '<td>'+value.url+'</td>';
                                              else
                                                  html += '<td>'+empty_values+'</td>';
                                         '</tr>';
                             
                               });
-//                               console.log(html);
                               $('.tree-tbody').append(html);
                                $("#tree").treeTable();
                         }
@@ -142,13 +119,6 @@
                             });
 
                             return newObj;
-                        }
-                        
-                        function sortByKey(array, key) {
-                            return array.sort(function(a, b) {
-                                var x = a[key]; var y = b[key];
-                                return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-                            });
                         }
 });
 }(jQuery));

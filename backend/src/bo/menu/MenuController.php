@@ -24,18 +24,17 @@ use Exception;
 use Menu\Menu;
 use Menu\MenuManager as MenuManager;
 
-
 class MenuController extends BaseAction implements BaseController {
-    
+
     private $commonManager;
     private $menu;
     private $menuManager;
-    
+
     public function __construct($request) {
         $file = dirname(dirname(dirname(__FILE__))) . '/lang/trad_fr.ini';
         $this->parameters = parse_ini_file($file);
         $this->commonManager = new CommonManager();
-        $this->menu=new Menu();
+        $this->menu = new Menu();
         $this->menuManager = new MenuManager();
         try {
             if (isset($request['ACTION'])) {
@@ -67,68 +66,62 @@ class MenuController extends BaseAction implements BaseController {
             $this->doError('-1', $e->getMessage());
         }
     }
-    
-    public function doInsert($request)
-    {
-         $this->doLogInfo('List des parametres:' . $this->doGetListParam());
+
+    public function doInsert($request) {
+        $this->doLogInfo('List des parametres:' . $this->doGetListParam());
         try {
-            if(isset($request['ACTION']) &&  isset($request['userId']) && isset($request['name']) && isset($request['title']) && isset($request['text']) &&
-                isset($request['parent']) && isset($request['type']) && isset($request['actions']) && isset($request['methode']) && isset($request['url'])){
-                    
-                    if($request['userId']!='' && $request['name']!='' && $request['title']!='' && $request['text']!='' &&
-                        $request['parent']!='' && $request['type']!='' && $request['actions']!='' && $request['methode']!='' && $request['url']!='' ){
-                            $user = $this->commonManager->findById("User\User", $request['userId']);
-                            
-                            $this->menu->setName($request['name']);
-                            $this->menu->setTitle($request['title']);
-                            $this->menu->setText($request['text']);
-                            if($request['parent']!="ALL"){
-                                $parent=$this->commonManager->findById("Menu\Menu", $request['parent']);
-                                $this->menu->setParent($parent);
+            if (isset($request['ACTION']) && isset($request['userId']) && isset($request['name']) && isset($request['title']) && isset($request['text']) &&
+                    isset($request['parent']) && isset($request['type']) && isset($request['actions']) && isset($request['methode']) && isset($request['url'])) {
+
+                if ($request['userId'] != '' && $request['name'] != '' && $request['title'] != '' && $request['text'] != '' &&
+                        $request['parent'] != '' && $request['type'] != '' && $request['actions'] != '' && $request['methode'] != '' && $request['url'] != '') {
+                    $user = $this->commonManager->findById("User\User", $request['userId']);
+
+                    $this->menu->setName($request['name']);
+                    $this->menu->setTitle($request['title']);
+                    $this->menu->setText($request['text']);
+                    if ($request['parent'] != "ALL") {
+                        $parent = $this->commonManager->findById("Menu\Menu", $request['parent']);
+                        $this->menu->setParent($parent);
+                    }
+
+                    if ($request['type'] == "accesskey") {
+                        if (isset($request['ordre'])) {
+                            $this->menu->setOrdre($request['ordre']);
+                            if ($request['odre'] !== 'ALL')
+                                $this->menu->setOrdre($request['ordre']);
+                            else {
+                                $this->doLogError($this->parameters['CODE_101_ADMIN']);
+                                throw new ConstraintException('Le champs ordre est vide');
                             }
-                            
-                            if($request['type']=="accesskey"){
-                                if(isset($request['ordre'])){
-                                    $this->menu->setOrdre($request['ordre']);
-                                    if($request['odre']!=='ALL')
-                                        $this->menu->setOrdre($request['ordre']);
-                                    else {
-                                        $this->doLogError($this->parameters['CODE_101_ADMIN']);
-                                        throw new ConstraintException('Le champs ordre est vide');
-                                    }
-                                }
+                        }
 //                                 else {
 //                                     $this->doLogError($this->parameters['CODE_100_ADMIN']);
 //                                     throw new ConstraintException($this->parameters['CODE_100']);
 //                                 }
-                            }
-                            else
-                               $this->menu->setOrdre(0); 
-                            $this->menu->setType($request['type']);
-                            $this->menu->setAction($request['actions']);
-                            $this->menu->setMethode($request['methode']);
-                            $this->menu->setUrl($request['url']);
-                            $this->menu->setUser($user);
-                            $this->menu->setGenerate(1);
-                            
-                            $menu= $this->commonManager->insert($this->menu);
-                            
-                            if($menu!=null){
-                                $this->doSuccess($menu->getId(), $this->parameters['INSERT']);
-                                $this->doLogInfo('***************************************** Fin ajout Menu *****************************************');
-                                
-                            }
-                            else {
-                                $this->doLogError($this->parameters['CODE_104_ADMIN']);
-                                throw new ConstraintException($this->parameters['CODE_104']);
-                            }
-                            
-                    }else {
-                        $this->doLogError($this->parameters['CODE_101_ADMIN']);
-                        throw new ConstraintException('Certains champs sont vides');
+                    } else
+                        $this->menu->setOrdre(0);
+                    $this->menu->setType($request['type']);
+                    $this->menu->setAction($request['actions']);
+                    $this->menu->setMethode($request['methode']);
+                    $this->menu->setUrl($request['url']);
+                    $this->menu->setUser($user);
+                    $this->menu->setGenerate(1);
+
+                    $menu = $this->commonManager->insert($this->menu);
+
+                    if ($menu != null) {
+                        $this->doSuccess($menu->getId(), $this->parameters['INSERT']);
+                        $this->doLogInfo('***************************************** Fin ajout Menu *****************************************');
+                    } else {
+                        $this->doLogError($this->parameters['CODE_104_ADMIN']);
+                        throw new ConstraintException($this->parameters['CODE_104']);
                     }
-                    
-            }else {
+                } else {
+                    $this->doLogError($this->parameters['CODE_101_ADMIN']);
+                    throw new ConstraintException('Certains champs sont vides');
+                }
+            } else {
                 $this->doLogError($this->parameters['CODE_100_ADMIN']);
                 throw new ConstraintException($this->parameters['CODE_100']);
             }
@@ -144,7 +137,6 @@ class MenuController extends BaseAction implements BaseController {
             $this->doLogInfo($e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
             $this->doError('-1', $this->parameters['ERREUR_SERVEUR']);
         }
-        
     }
     
     public function doGenerateMenu($request){
@@ -246,19 +238,19 @@ class MenuController extends BaseAction implements BaseController {
             $this->doError('-1', $this->parameters['ERREUR_SERVEUR']);
         }
     }
-    
-    public function doGetAllMenuByUser($request){
+
+    public function doGetAllMenuByUser($request) {
         $this->doLogInfo("Debut doGetAllMenuByUser");
         $this->doLogInfo('List des parametres:' . $this->doGetListParam());
         try {
             $this->doLogInfo('List des parametres:' . $this->doGetListParam());
-            if (isset($request['ACTION']) &&  isset($request['userId']) ) {
+            if (isset($request['ACTION']) && isset($request['userId'])) {
                 $user = $this->commonManager->findById("User\User", $request['userId']);
-                $listMenu = $this->menuManager->getAllMenuByUser($user);
-//                 var_dump($listMenu);
+                $listMenu = $this->menuManager->getAllMenusArray($user);
+            //    var_dump($listMenu);
 //                 $listMenu=json_encode($listMenu);
 //                 $this->doLogInfo('List menu:' . $listMenu);
-                
+
                 if ($listMenu != NULL) {
                     $this->doSuccessO($listMenu);
                     $this->doLogInfo("Fin doGetAllMenuByUser");
@@ -268,7 +260,6 @@ class MenuController extends BaseAction implements BaseController {
                     $this->doLogInfo("Erreur liste des menus vides");
                 }
             }
-            
         } catch (ConstraintException $e) {
             $this->doLogError($e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
             $this->doError('-1', $e->getMessage());
@@ -279,33 +270,39 @@ class MenuController extends BaseAction implements BaseController {
             $this->doLogError("Fin doGetAllMenuByUser ");
         }
     }
-    
-    public function doRestore($request)
-    {}
 
-    public function doDeactivate($request)
-    {}
+    public function doRestore($request) {
+        
+    }
 
-    public function doRemove($request)
-    {}
+    public function doDeactivate($request) {
+        
+    }
 
-    public function doView($request)
-    {}
+    public function doRemove($request) {
+        
+    }
 
-    public function doUpdate($request)
-    {}
+    public function doView($request) {
+        
+    }
 
-    public function doActivate($request)
-    {}
+    public function doUpdate($request) {
+        
+    }
 
-    public function doList($request)
-    {}
+    public function doActivate($request) {
+        
+    }
 
-    public function dofindById($request)
-    {}
+    public function doList($request) {
+        
+    }
 
-    
-    
+    public function dofindById($request) {
+        
+    }
+
     //put your code here
 }
 

@@ -69,7 +69,7 @@
                                     <th>Type(acceskey ou input)</th>
                                     <th>Parent</th>
                                     <th>Action(GET ou POST)</th>
-                                    <th>URL</th>
+                                    <th>URL(WebService)</th>
                                 </tr>
                             </thead>
                             <tbody class="tree-tbody">
