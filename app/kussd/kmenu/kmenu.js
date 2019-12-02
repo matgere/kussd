@@ -124,7 +124,7 @@
                         </div>\
                         </div>\
                     		<div class="form-group row">\
-                            <label class="col-12 col-sm-4 col-form-label text-left text-sm-right">URL</label>\
+                            <label class="col-12 col-sm-4 col-form-label text-left text-sm-right">URL/WebService</label>\
                             <div class="col-12 col-sm-8 col-lg-7">\
                                 <input class="form-control form-control-sm" type="text" name="url_name" id="url_id" placeholder="">\
                             </div>\
