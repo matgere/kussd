@@ -39,3 +39,12 @@
                                 AND m.status=1 AND m.generate=1 order by parent_id
 02.12.2019 21:03:15.095 INFO - [userId-1] - ok
 02.12.2019 21:03:15.106 INFO - [userId-1] - Fin doGetAllMenuByUser
+02.12.2019 21:12:57.622 INFO - [userId-1] - Debut doGetAllMenuByUser
+02.12.2019 21:12:57.636 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+02.12.2019 21:12:57.647 INFO - [userId-1] - List des parametres: - ACTION : GET_ALL_MENU_BY_USER - userId : 1
+02.12.2019 21:12:58.139 INFO - [userId-1] - SELECT t0.id AS id1, t0.dateConnected AS dateConnected2, t0.dateDisconnected AS dateDisconnected3, t0.dateexpirationToken AS dateexpirationToken4, t0.etatCompte AS etatCompte5, t0.login AS login6, t0.password AS password7, t0.statut AS statut8, t0.token AS token9, t0.validate AS validate10, t0.repName AS repName11, t0.numTel AS numTel12, t0.activateUser AS activateUser13, t0.status AS status14, t0.activate AS activate15, t0.archive AS archive16, t0.createdDate AS createdDate17, t0.updatedDate AS updatedDate18, t0.deletedDate AS deletedDate19, t0.activatedDate AS activatedDate20, t0.deactivatedDate AS deactivatedDate21, t0.archivedDate AS archivedDate22, t0.restoredDate AS restoredDate23, t0.removedDate AS removedDate24, t0.undoArhivedDate AS undoArhivedDate25, t0.createdBy AS createdBy26, t0.updatedBy AS updatedBy27, t0.removedBy AS removedBy28, t0.deletedBy AS deletedBy29, t0.restoredBy AS restoredBy30, t0.activatedBy AS activatedBy31, t0.deactivatedBy AS deactivatedBy32, t0.archivedBy AS archivedBy33, t0.undoarchivedBy AS undoarchivedBy34 FROM ud_user t0 WHERE t0.id = ?
+02.12.2019 21:12:58.181 INFO - [userId-1] - userId=1
+02.12.2019 21:12:58.195 INFO - [userId-1] - SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url,ordre, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1 order by parent_id
+02.12.2019 21:12:58.209 INFO - [userId-1] - ok
+02.12.2019 21:12:58.220 INFO - [userId-1] - Fin doGetAllMenuByUser
