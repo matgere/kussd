@@ -33,9 +33,7 @@
                         function onListReceived(data) {
                                 $('.tree-tbody').empty();
                                 var html = '';
-                                console.log(data);
                                 $.each(data, function(key, value) {
-                                    
                                      var node_id="";
                                     var node_class="";
                                     var empty_values='Neant';

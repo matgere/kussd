@@ -89,6 +89,12 @@ class MenuManager  extends BaseAction implements \Bo\BaseManager  {
     
     public function getAllMenuByUser($user){
         return $this->menuQueries->getAllMenuByUser($user);
+        //$parents = $this->menuQueries->getAllParents($user->getId());
+//        $Menus =$this->menuQueries->getAllMenuByUser($user);
+//        $tab= array();
+//        $tab['parents'] = $parents;
+//        $tab['menus'] = $Menus;
+//        return $tab;
 //        $allTab =array();
 //        $tab=array();
 //        $data = $this->menuQueries->getAllParents($user->getId());

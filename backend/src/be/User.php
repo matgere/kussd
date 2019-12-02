@@ -11,7 +11,7 @@ namespace User;
 use Be\BaseEntite as BaseEntite;
 
 /** @Entity @HasLifecycleCallbacks 
- * @Table(name="ud_user"),uniqueConstraints={@UniqueConstraint(columns={"$login", "$password"})}) * */
+  @Table(name="ud_user"),uniqueConstraints={@UniqueConstraint(columns={"$login", "$password"})})  */
 Class User extends BaseEntite {
 
     /** @Id
@@ -21,53 +21,95 @@ Class User extends BaseEntite {
 
     /**
      * @Column(type="datetime",nullable=true)
-     * */
+      /
     private $dateConnected;
 
     /**
      * @Column(type="datetime", nullable=true)
-     * */
+      /
     private $dateDisconnected;
 
     /**
      * @Column(type="bigint",length=20, nullable=true)
-     * */
+      /
     private $dateexpirationToken;
 
     /**
      * @Column(type="smallint",length=1, nullable=false)
-     * */
+      /
     private $etatCompte;
 
     /**
      * @Column(type="string", length=200, nullable=false)
-     * */
+      /
     private $login;
 
     /**
      * @Column(type="string", length=200, nullable=false)
-     * */
+      /
     private $password;
 
     /**
      * @Column(type="smallint",length=1, nullable=false)
-     * */
+      /
     private $statut;
 
     /**
      * @Column(type="string", length=255, nullable=true)
-     * */
+      /
     private $token;
 
     /**
      * @Column(type="smallint",length=1, nullable=true)
-     * */
+      /
     private $validate;
+    
+    /**
+     * @Column(type="string", length=200, nullable=true)
+      /
+    private $repName;
+    
+    /**
+     * @Column(type="string", length=200, nullable=true)
+      /
+    private $numTel;
 
     /**
      * @Column(type="string", length=200, nullable=true)
-     * */
+      /
     private $activateUser;
+    /**
+     * @return mixed
+     */
+    public function getRepName()
+    {
+        return $this->repName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNumTel()
+    {
+        return $this->numTel;
+    }
+
+    /**
+     * @param mixed $repName
+     */
+    public function setRepName($repName)
+    {
+        $this->repName = $repName;
+    }
+
+    /**
+     * @param mixed $numTel
+     */
+    public function setNumTel($numTel)
+    {
+        $this->numTel = $numTel;
+    }
+
     /**
      * @return mixed
      */
