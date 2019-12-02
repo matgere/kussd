@@ -182,8 +182,8 @@ class MenuQueries extends \Bo\BaseAction implements \Bo\BaseQueries
         $this->doLogInfo('userId=' . $user->getId() );
         if ($user != null) {
             $stmt = Bootstrap::$entityManager->getConnection()->prepare(
-                "SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url, generate  FROM ud_menu m WHERE m.user_id=:user
-                                AND m.status=1 AND m.generate=1 order by id,parent_id");
+                "SELECT DISTINCT(m.id), parent_id, m.name, m.title, text, type, action, methode, url,ordre, generate  FROM ud_menu m WHERE m.user_id=:user
+                                AND m.status=1 AND m.generate=1 order by parent_id");
             $stmt->execute(array(
                 'user' => $user->getId()
             ));
@@ -198,20 +198,49 @@ class MenuQueries extends \Bo\BaseAction implements \Bo\BaseQueries
         }
       }
       
-      public function getAllMenus(){
-          $query = Bootstrap::$entityManager->createQuery("SELECT DISTINCT(m.id) menuId, m.name, m.title FROM Menu\Menu m WHERE m.user=:user
-                                AND m.status=1 AND m.generate=1");
-          $result = $query->getResult();
-          if ($result != null)
-              return $result;
-              else
-                  return null;
+      
+//       public function getMasterParent(){
+//           $query = Bootstrap::$entityManager->createQuery("SELECT DISTINCT(m.id) id, m.name, m.title, ordre, generate, type 
+//                                                         FROM Menu\Menu m WHERE m.user=:user and m.parent=null
+//                                                         AND m.status=1 AND m.generate=1");
+//           $result = $query->getResult();
+//           if ($result[0] != null)
+//               return $result[0];
+//               else
+//                   return null;
+//       }
+      
+      public function getMasterParent($user) {
+          if ($user != null) {
+              $query = Bootstrap::$entityManager->createQuery("select DISTINCT(m.id) id, m.name, m.title, m.ordre, m.generate, m.text, m.type, m.action, m.methode
+                                                            from Menu\Menu m where m.user=:user and m.parent is null
+                                                            AND m.status=1 AND m.generate=1");
+              $query->setParameter('user', $user);
+              $result = $query->getResult();
+              if ($result != null)
+                  return $result[0];
+                  else
+                      return null;
+          }
+      }
+      
+      public function getAllChildByParentId($parent) {
+          if ($parent != null) {
+              $query = Bootstrap::$entityManager->createQuery("select DISTINCT(m.id) id, m.name, m.title, m.ordre, m.generate, m.text, m.type, m.action, m.methode
+                                                            from Menu\Menu m where m.parent=:parent AND m.status=1 AND m.generate=1");
+              $query->setParameter('parent', $parent);
+              $result = $query->getResult();
+              if ($result != null)
+                  return $result;
+                  else
+                      return null;
+          }
       }
       
       public function getAllParents($userId){
           if ($userId != null) {
             $stmt = Bootstrap::$entityManager->getConnection()->prepare(
-                "SELECT DISTINCT(parent_id) parent_id, m.name, m.title, text, type, action, methode, url, generate FROM ud_menu m WHERE m.user_id=$userId
+                "SELECT DISTINCT(parent_id) parent_id, m.name, m.title, m.text, m.type, m.action, m.methode, m.url, m.generate FROM ud_menu m WHERE m.user_id=$userId
                                 AND m.status=1 AND m.generate=1");
             $stmt->execute(array(
             ));

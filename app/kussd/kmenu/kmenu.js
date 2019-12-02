@@ -72,7 +72,7 @@
                             <div class="form-group row">\
                     		<label class="col-12 col-sm-4 col-form-label text-left text-sm-right">Text</label>\
                     		<div class="col-12 col-sm-8 col-lg-7">\
-                            <input class="form-control form-control-sm" type="text" name="text_name" id="text_id" placeholder="">\
+                            <textarea class="form-control form-control-sm" name="text_name" id="text_id" ></textarea>\
                             </div>\
                             </div>\
                             <div class="form-group row">\
@@ -175,7 +175,7 @@
                             eParams += '&text=' + dialog.getModalBody().find('#text_id').val();
                             eParams += '&parent=' + dialog.getModalBody().find('#parent_id').val();
                             eParams += '&type=' + dialog.getModalBody().find('#type_id:checked').val();
-                            eParams += '&odre=' + dialog.getModalBody().find('#ordre_id').val();
+                            eParams += '&ordre=' + dialog.getModalBody().find('#ordre_id').val();
                             eParams += '&actions=' + dialog.getModalBody().find('#actions_id').val();
                             eParams += '&methode=' + dialog.getModalBody().find('#methode_id').val();
                             eParams += '&url=' + dialog.getModalBody().find('#url_id').val();
@@ -185,7 +185,8 @@
                                 	serverResponse = $.parseJSON(serverResponse);
 									if (serverResponse.rc === 0) {
                                 	new PNotify({type: 'success', title: 'Univers Edu', text: serverResponse.message});
-									dialog.close();
+									self.GetAllMenuByUser(userId, onDataReceivedMenu, null);
+                                	dialog.close();
 									dialog.getModalBody().off();
 									dialog.getModalBody().empty();
 									}
@@ -233,6 +234,51 @@
         function onError() {
         	new PNotify({type: 'error', title: 'Univers Edu', text: serverResponse.error});
         }
+        
+        function onDataReceivedMenu(data) {
+          console.log(data);
+             $('.tree-tbody').empty();
+             var html = '';
+             $.each(data, function(key, value) {
+                  var node_id="";
+                 var node_class="";
+                 var empty_values='Neant';
+                 node_id = "node-" + value.id
+                 if(value.parent_id != null){
+                     node_class="child-of-node-" + value.parent_id;
+                    
+                 }
+                    //class="'+node_class+'" 
+                 html += '<tr id="'+node_id+'" class="'+node_class+'" >';
+                         if(value.title != null)
+                            html +=  '<td>'+value.title+'</td>';
+                          else
+                              html += '<td>'+empty_values+'</td>';
+                           if(value.text != null)
+                             html += '<td>'+value.text+'</td>';
+                          else
+                              html += '<td>'+empty_values+'</td>';
+                           if(value.type != null)
+                             html +=  '<td>'+value.type+'</td>';
+                         if(value.parent_id != null)
+                        html +=  '<td>'+value.parent_id+'</td>';
+                          else
+                             html +=  '<td>'+empty_values+'</td>';
+                             if(value.methode != null && value.methode != 'undefined')
+                        html +=  '<td>'+value.methode+'</td>';
+                          else
+                              html +=  '<td>'+empty_values+'</td>';
+                          if(value.url != null)
+                              html +=  '<td>'+value.url+'</td>';
+                          else
+                              html += '<td>'+empty_values+'</td>';
+                     '</tr>';
+         
+           });
+//            console.log(html);
+           $('.tree-tbody').html(html);
+            $("#tree").treeTable();
+     }
 
    return construct(options);
     };

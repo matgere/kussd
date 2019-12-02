@@ -119,8 +119,12 @@ class MenuManager  extends BaseAction implements \Bo\BaseManager  {
         }
     }
     
-    public function getAllMenus($user){
-        return $this->menuQueries->getAllMenus($user);
+    public function getMasterParent($parent){
+        return $this->menuQueries->getMasterParent($parent);
+    }
+    
+    public function getAllChildByParentId($parent){
+        return $this->menuQueries->getAllChildByParentId($parent);
     }
     //put your code here
 }

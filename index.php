@@ -20,9 +20,9 @@
           <div class="splash-container">
             <div class="card card-border-color card-border-color-primary">
               <div class="card-header">
-                  KUSSD
+                  KUSSD+
                   <!--<img class="logo-img" src="app/assets/img/logo-xx.png" alt="logo" width="{conf.logoWidth}" height="27">-->
-                  <span class="splash-description">Entrer votre login et mot de passe svp.</span></div>
+                  <span class="splash-description">Entrer votre login et mot de passe SVP.</span></div>
               <div class="card-body">
                  <form action="#" method="post">
                   <div class="login-form">

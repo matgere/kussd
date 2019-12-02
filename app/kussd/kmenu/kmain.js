@@ -19,6 +19,8 @@
 //									$( ".div-menu" ).show();
 									okmenu.New(userId, function () {
 	                                }, null);
+                                        okmenu.GetAllMenuByUser(userId, onListReceived, onError);
+
 								});
 						// bouton génération menu
 						$('body').on('click', '#btn_generateMenu',function(e) {
