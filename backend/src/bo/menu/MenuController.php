@@ -194,8 +194,9 @@ class MenuController extends BaseAction implements BaseController {
                                         
                             $file = $chemin.$repUser.$nameChild.'.php';
                         
-                        if($typeChild=="accesskey")
-                            $tagChild.='<a href="'.$nameChild.'.php?response="'.$titleChild.'" >'.$titleChild.'</a><br/>';
+//                             if($typeChild=="accesskey"){
+                            $tagChild.='<a href="'.$nameChild.'.php?response="'.$titleChild.'" accesskey="'.$ordreChild.'" >'.$titleChild.'</a><br/>';
+                            
                             }
                     }
                     else
