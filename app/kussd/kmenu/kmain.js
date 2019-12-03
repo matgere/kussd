@@ -10,7 +10,7 @@
 					function() {	
 						var okmenu = new kmenu();
 						var userId=1;
-                                                 okmenu.GetAllMenuByUser(userId, onListReceived, onError);
+                                                 okmenu.GetList(userId, onListReceived, onError);
 						 
 						  
 						// bouton ajout dossier
@@ -19,7 +19,7 @@
 //									$( ".div-menu" ).show();
 									okmenu.New(userId, function () {
 	                                }, null);
-                                        okmenu.GetAllMenuByUser(userId, onListReceived, onError);
+                                        okmenu.GetList(userId, onListReceived, onError);
 
 								});
 						// bouton génération menu
@@ -30,11 +30,11 @@
 						
                                                 // gestion des données de la liste des menus 
                         function onListReceived(data) {
-                             //console.log(data);
+                            
                                 $('.tree-tbody').empty();
                                 var html = '';
                                 $.each(data, function(key, value) {
-                                    console.log(value.Parent);
+                                   //console.log(value.Parent);
                                      var node_id="";
                                     var node_class="";
                                     var empty_values='Neant';
@@ -48,6 +48,7 @@
                                         var url='';
                                         var ordre='';
                                     if(typeof value.Parent != 'undefined'){
+                                         
                                         node_id = "node-" + value.id;
                                         title = value.Parent;
                                     }
@@ -63,7 +64,7 @@
                                             url = value.url;
                                             //ordre = value.ordre;
                                     }
-                                        
+                                    console.log('Paaa '+ value.Parent);  
                                        //class="'+node_class+'" 
                                     html += '<tr id="'+node_id+'" class="'+node_class+'" >';
                                             if(title != null )

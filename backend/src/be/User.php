@@ -31,9 +31,6 @@ Class User extends BaseEntite {
     private $numTel;
 
     
-
-    
-
     /**
      * @return mixed
      */
