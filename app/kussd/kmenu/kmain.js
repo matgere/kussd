@@ -9,7 +9,7 @@
 			.ready(
 					function() {	
 						var okmenu = new kmenu();
-						var userId=1;
+						var userId= 1;
                                                  okmenu.GetList(userId, onListReceived, onError);
 						 
 						  

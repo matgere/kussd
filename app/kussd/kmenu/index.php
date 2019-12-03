@@ -1,3 +1,15 @@
+<?php
+
+if(!isset($_COOKIE['userId']) || !isset($_COOKIE['userLogin'])){
+    header('Location: ../../../index.php');
+    exit();  
+}
+
+$userId = $_COOKIE['userId'];
+$userLogin = $_COOKIE['userLogin'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -108,5 +120,6 @@
         <script src="../../assets/js/intlTelInput.js" type="text/javascript"></script>
         <!-- 		Query TreeTable plugin's script -->
         <script src="../../assets/js/jquery.treetable.js"></script>
+        <script src="../../assets/js/jquery.cookie.js" type="text/javascript"></script>
     </body>
 </html>

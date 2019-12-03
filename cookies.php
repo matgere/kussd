@@ -38,7 +38,9 @@ setcookie("userLogin",strip_tags($userInfos['login']), $date_of_expiry, $path, $
     
    <script>
                 //$(document).ready(function(){
-                    document.location.href='app/kussd/kmenu/';
+                   document.location.href='app/kussd/kmenu/';
+
+
                // });
    </script>
   </body>

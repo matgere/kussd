@@ -20,8 +20,11 @@
           <div class="splash-container">
             <div class="card card-border-color card-border-color-primary">
               <div class="card-header">
-                  KUSSD+
-                  <!--<img class="logo-img" src="app/assets/img/logo-xx.png" alt="logo" width="{conf.logoWidth}" height="27">-->
+                  <h3  style=" color: blue;font-weight: bold;">KUSSD+</h3>
+<!--                  <img class="logo-img" src="app/assets/img/kussd.png" alt="logo" style="
+    width: 282px;
+    height: 127px;
+">-->
                   <span class="splash-description">Entrer votre login et mot de passe SVP.</span></div>
               <div class="card-body">
                  <form action="#" method="post">
@@ -54,6 +57,8 @@
     <script src="app/assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
     <script src="app/assets/js/app.js" type="text/javascript"></script>
     <script src="app/plugins/pnotify/pnotify.custom.min.js"type="text/javascript"></script>
+    
+    <script src="app/assets/js/jquery.cookie.js" type="text/javascript"></script>
     <script src="app/assets/js/jquery.md5.js" type="text/javascript"></script>
     <script src="auth.js" type="text/javascript"></script>
     <script type="text/javascript">
