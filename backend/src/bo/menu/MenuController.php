@@ -107,6 +107,7 @@ class MenuController extends BaseAction implements BaseController {
                     $this->menu->setUrl($request['url']);
                     $this->menu->setUser($user);
                     $this->menu->setGenerate(1);
+                    $this->menu->setEtape(0);
 
                     $menu = $this->commonManager->insert($this->menu);
 
@@ -239,7 +240,7 @@ class MenuController extends BaseAction implements BaseController {
         }
     }
 
-    public function doGetAllMenuByUser($request) {
+    public function doList($request) {
         $this->doLogInfo("Debut doGetAllMenuByUser");
         $this->doLogInfo('List des parametres:' . $this->doGetListParam());
         try {
@@ -260,6 +261,39 @@ class MenuController extends BaseAction implements BaseController {
                     $this->doLogInfo("Erreur liste des menus vides");
                 }
             }
+        } catch (ConstraintException $e) {
+            $this->doLogError($e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
+            $this->doError('-1', $e->getMessage());
+            $this->doLogError("Fin doGetAllMenuByUser");
+        } catch (Exception $e) {
+            $this->doLogError($e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
+            $this->doError('-1', $this->parameters['ERREUR_SERVEUR']);
+            $this->doLogError("Fin doGetAllMenuByUser ");
+        }
+    }
+
+    public function doGetAllMenuByUser($request){
+        $this->doLogInfo("Debut doGetAllMenuByUser");
+        $this->doLogInfo('List des parametres:' . $this->doGetListParam());
+        try {
+            $this->doLogInfo('List des parametres:' . $this->doGetListParam());
+            if (isset($request['ACTION']) &&  isset($request['userId']) ) {
+                $user = $this->commonManager->findById("User\User", $request['userId']);
+                $listMenu = $this->menuManager->getAllMenuByUser($user);
+                //                 var_dump($listMenu);
+                //                 $listMenu=json_encode($listMenu);
+                //                 $this->doLogInfo('List menu:' . $listMenu);
+                
+                if ($listMenu != NULL) {
+                    $this->doSuccessO($listMenu);
+                    $this->doLogInfo("Fin doGetAllMenuByUser");
+                } else {
+                    $this->doLogError($this->parameters['CODE_110_ADMIN']);
+                    throw new ConstraintException($this->parameters['CODE_110']);
+                    $this->doLogInfo("Erreur liste des menus vides");
+                }
+            }
+            
         } catch (ConstraintException $e) {
             $this->doLogError($e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
             $this->doError('-1', $e->getMessage());
@@ -292,10 +326,6 @@ class MenuController extends BaseAction implements BaseController {
     }
 
     public function doActivate($request) {
-        
-    }
-
-    public function doList($request) {
         
     }
 

@@ -11,6 +11,7 @@
 	            generateMenuUrl: '../../../backend/src/bo/menu/MenuController.php?ACTION=GENERATE_MENU',
 	            addMenuUrl: '../../../backend/src/bo/menu/MenuController.php?ACTION=INSERT',
 	            getAllMenuByUser: '../../../backend/src/bo/menu/MenuController.php?ACTION=GET_ALL_MENU_BY_USER',
+	            getList: '../../../backend/src/bo/menu/MenuController.php?ACTION=LIST',
 	        };
 		  // constructor
         var construct = function (options) {
@@ -25,6 +26,22 @@
         //Génération des menus sur l'ussd
         this.Generate = function ( userId, onGenered, onError) {
             LoadGenerate(this, userId, onGenered, onError);
+        };
+        
+        // Cette fonction permet de charger tous les menus d'un user
+        this.GetList = function (userId, onDataReceived, onError) {
+            $.ajax({
+                method: "GET",
+                url: o.getList,
+                async: false,
+                data: {userId:userId}
+            }).done(function (data) {
+//            	console.log(data);
+                onDataReceived($.parseJSON(data));
+//                onDataReceived(data);
+            }).fail(function (e) {
+                new PNotify({type: 'error', title: 'Univers Edu', text: 'Une erreur est survenue lors du traitement de votre requête.'});
+            });
         };
         
      // Cette fonction permet de charger tous les menus d'un user
@@ -60,19 +77,19 @@
                                       <div class="form-group row">\
                                 <label class="col-12 col-sm-4 col-form-label text-left text-sm-right">Nom</label>\
                                 <div class="col-12 col-sm-8 col-lg-7">\
-                                    <input class="form-control form-control-sm" type="text" name="nom_name" id="nom_id" placeholder="">\
+                                    <input class="form-control form-control-sm" type="text" name="nom_name" id="nom_id" placeholder="CONSULTATION-SOLDE">\
                                 </div>\
                             </div>\
                             <div class="form-group row">\
                             <label class="col-12 col-sm-4 col-form-label text-left text-sm-right">Titre</label>\
                             <div class="col-12 col-sm-8 col-lg-7">\
-                                <input class="form-control form-control-sm" type="text" name="titre_name" id="titre_id" placeholder="">\
+                                <input class="form-control form-control-sm" type="text" name="titre_name" id="titre_id" placeholder="Consultatation du solde">\
                             </div>\
                         </div>\
                             <div class="form-group row">\
                     		<label class="col-12 col-sm-4 col-form-label text-left text-sm-right">Text</label>\
                     		<div class="col-12 col-sm-8 col-lg-7">\
-                            <textarea class="form-control form-control-sm" name="text_name" id="text_id" ></textarea>\
+                            <textarea class="form-control form-control-sm" name="text_name" id="text_id" placeholder="Veuilllez entrer votre code pin pour consulter votre solde SVP!"></textarea>\
                             </div>\
                             </div>\
                             <div class="form-group row">\
@@ -109,7 +126,7 @@
                     		<div class="form-group row">\
                     		<label class="col-12 col-sm-4 col-form-label text-left text-sm-right">Action</label>\
                             <div class="col-12 col-sm-8 col-lg-7">\
-                                <input class="form-control form-control-sm" type="text" name="action_name" id="actions_id" placeholder="">\
+                                <input class="form-control form-control-sm" type="text" name="action_name" id="actions_id" placeholder="Consulter solde">\
                             </div>\
                         </div>\
                     		<div class="form-group row">\
@@ -126,7 +143,7 @@
                     		<div class="form-group row">\
                             <label class="col-12 col-sm-4 col-form-label text-left text-sm-right">URL/WebService</label>\
                             <div class="col-12 col-sm-8 col-lg-7">\
-                                <input class="form-control form-control-sm" type="text" name="url_name" id="url_id" placeholder="">\
+                                <input class="form-control form-control-sm" type="text" name="url_name" id="url_id" placeholder="httts://localhost:8445/api">\
                             </div>\
                         </div>\
                         </div>\
@@ -185,7 +202,7 @@
                                 	serverResponse = $.parseJSON(serverResponse);
 									if (serverResponse.rc === 0) {
                                 	new PNotify({type: 'success', title: 'Univers Edu', text: serverResponse.message});
-									self.GetAllMenuByUser(userId, onDataReceivedMenu, null);
+									self.GetList(userId, onDataReceivedMenu, null);
                                 	dialog.close();
 									dialog.getModalBody().off();
 									dialog.getModalBody().empty();
@@ -236,48 +253,70 @@
         }
         
         function onDataReceivedMenu(data) {
-          console.log(data);
-             $('.tree-tbody').empty();
-             var html = '';
-             $.each(data, function(key, value) {
-                  var node_id="";
-                 var node_class="";
-                 var empty_values='Neant';
-                 node_id = "node-" + value.id
-                 if(value.parent_id != null){
-                     node_class="child-of-node-" + value.parent_id;
-                    
-                 }
-                    //class="'+node_class+'" 
-                 html += '<tr id="'+node_id+'" class="'+node_class+'" >';
-                         if(value.title != null)
-                            html +=  '<td>'+value.title+'</td>';
-                          else
-                              html += '<td>'+empty_values+'</td>';
-                           if(value.text != null)
-                             html += '<td>'+value.text+'</td>';
-                          else
-                              html += '<td>'+empty_values+'</td>';
-                           if(value.type != null)
-                             html +=  '<td>'+value.type+'</td>';
-                         if(value.parent_id != null)
-                        html +=  '<td>'+value.parent_id+'</td>';
-                          else
-                             html +=  '<td>'+empty_values+'</td>';
-                             if(value.methode != null && value.methode != 'undefined')
-                        html +=  '<td>'+value.methode+'</td>';
-                          else
-                              html +=  '<td>'+empty_values+'</td>';
-                          if(value.url != null)
-                              html +=  '<td>'+value.url+'</td>';
-                          else
-                              html += '<td>'+empty_values+'</td>';
-                     '</tr>';
-         
-           });
-//            console.log(html);
-           $('.tree-tbody').html(html);
-            $("#tree").treeTable();
+          $('.tree-tbody').empty();
+                                var html = '';
+                                $.each(data, function(key, value) {
+                                   //console.log(value.Parent);
+                                     var node_id="";
+                                    var node_class="";
+                                    var empty_values='Neant';
+                                   
+                                    var title='';
+                                        var type='';
+                                        var parent_id='';
+                                        var parent_name='';
+                                        var text='';
+                                        var methode='';
+                                        var url='';
+                                        var ordre='';
+                                    if(typeof value.Parent != 'undefined'){
+                                         
+                                        node_id = "node-" + value.id;
+                                        title = value.Parent;
+                                    }
+                                    else if(typeof value.Parent == 'undefined'){
+                                         node_id = "node-" + value.id;
+                                         node_class="child-of-node-" + value.parent_id;
+                                            parent_name = value.parent_name;
+                                            title = value.title;
+                                            type = value.type +', seq: '+value.ordre;
+                                            text = value.text;
+                                            parent_id = value.parent_id;
+                                            methode = value.methode;
+                                            url = value.url;
+                                            //ordre = value.ordre;
+                                    }
+                                    console.log('Paaa '+ value.Parent);  
+                                       //class="'+node_class+'" 
+                                    html += '<tr id="'+node_id+'" class="'+node_class+'" >';
+                                            if(title != null )
+                                               html +=  '<td>'+title+'</td>';
+                                             else
+                                                 html += '<td>'+empty_values+'</td>';
+                                              if(value.text != null)
+                                                html += '<td>'+text+'</td>';
+                                             else
+                                                 html += '<td>'+empty_values+'</td>';
+                                              if(value.type != null)
+                                                html +=  '<td>'+type+'</td>';
+                                            if(value.parent_name != null)
+                                           html +=  '<td>'+parent_name+'</td>';
+                                             else
+                                                html +=  '<td>'+empty_values+'</td>';
+                                                if(value.methode != null && value.methode != 'undefined')
+                                           html +=  '<td>'+methode+'</td>';
+                                             else
+                                                 html +=  '<td>'+empty_values+'</td>';
+                                             if(value.url != null)
+                                                 html +=  '<td>'+url+'</td>';
+                                             else
+                                                 html += '<td>'+empty_values+'</td>';
+                                        '</tr>';
+                            
+                              });
+//                               console.log(html);
+                              $('.tree-tbody').append(html);
+                               $("#tree").treeTable();
      }
 
    return construct(options);

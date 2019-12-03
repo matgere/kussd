@@ -11,7 +11,7 @@ namespace User;
 use Be\BaseEntite as BaseEntite;
 
 /** @Entity @HasLifecycleCallbacks 
-  @Table(name="ud_user"),uniqueConstraints={@UniqueConstraint(columns={"$login", "$password"})})  */
+  @Table(name="ud_user"),uniqueConstraints={@UniqueConstraint(columns={"login", "password"})})  */
 Class User extends BaseEntite {
 
     /** @Id
@@ -75,9 +75,6 @@ Class User extends BaseEntite {
     private $numTel;
 
     
-
-    
-
     /**
      * @return mixed
      */

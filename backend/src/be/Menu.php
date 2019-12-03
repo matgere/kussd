@@ -39,7 +39,7 @@ class Menu extends  BaseEntite
     * */
     private $ordre;
     /**
-     * @Column(type="integer")
+     * @Column(type="integer", options={"default":0})
      * */
     private $etape;
     /**
